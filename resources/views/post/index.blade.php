@@ -25,7 +25,8 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th>Status</th>
+            <th>Image</th>
+            {{-- <th>Status</th> --}}
             <th>Actions</th>
 
 
@@ -36,13 +37,14 @@
                 @foreach($posts as $post)
           <tr>
             <td>{{ $post->title }}</td>
-            <td class="py-4 px-6 border-b border-grey-light">
+            <td>  <img src="{{ asset($post->image) }}" alt="Image"  height="70" width="70" class=" rounded-md mt-5"></td>
+            {{-- <td class="py-4 px-6 border-b border-grey-light">
                       @if($post->publish)
                       <span class="text-blue inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-blue bg-green-500 rounded-full">Publish</span>
                       @else
                       <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-blue bg-gray-500 rounded-full">Draft</span>
                       @endif
-                  </td>
+                  </td> --}}
                   <td class="py-4 px-6 border-b border-grey-light text-right">
 
                     @can('Post edit')

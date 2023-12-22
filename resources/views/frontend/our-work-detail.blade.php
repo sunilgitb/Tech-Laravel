@@ -1,219 +1,219 @@
 @extends('frontend.layouts.app')
 @include('frontend.layouts.header')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work Detail - Tech Simians</title>
+</head>
+<!-- <body>
+    <main class="container">
+        <section class="breadcrumb">
+            <a href="/" class="breadcrumb__link">Home</a>
+            <a href="#" class="breadcrumb__link">Blog</a>
+            <a href="#" class="breadcrumb__link">How to enhance motivation for better business leads?</a>
+        </section>
+
+    </main>
+</body>
+</html> -->
 
 <body>
-
-
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Our Work Detail - Tech Simians</title>
-    </head>
-
-    <section class="project" style="margin-top: 80px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work Detail - Tech Simians</title>
+</head>
+  
+      <section class="project" style="margin-top: 80px;">
         <div class="container">
-            <h2 class="project__title" style="color:black">Air Book</h2>
-            <div class="project__text" style="color:black">
-                In publishing and graphic design, Lorem ipsum is a placeholder text
-                commonly used to demonstrate the visual form of a document or a
-                typeface without relying on meaningful content. Lorem ipsum may be
-                used as a placeholder before the final copy is available.
-            </div>
+          <h2 class="project__title" style="color:black">Document Management Systems</h2>
+          <div class="project__text" style="color:black">
+            It is all about Document Management Systems  
+            The features and functionalities of the YourVault
+            (Document Management System) is designed to provide efficient document
+            organization, user management, and document retrieval capabilities.
+            
+            The YourVault covers various aspects of document management, including
+            folder creation, user management, document tagging, and search
+            functionality. It also offers a dashboard for monitoring system metrics and
+            configuration options.
+          </div>
         </div>
         <section class="project__section">
 
-            <section style="margin-top:-50px;">
-                <img src="{{asset('frontend/assets/img/project-1_1.png')}}" alt="" width=100%; height=100%;
-                    style="margin-top: -82px;" class="project-1" />
-            </section>
-            <!-- <div class="project__grid-item">
+    <section style="margin-top:-50px;">
+      <img src="{{asset('frontend/assets/img/desktop.png')}}" alt="" width= 100%; height=100%; style="margin-top: 0px;" class="project-1" />
+    </section>
+    <!-- <div class="project__grid-item">
       <img src="{{asset('frontend/assets/img/project-1_2.png')}}" alt="" />
     </div>
     <div class="project__grid-item">
       <img src="{{asset('frontend/assets/img/project-1_3.png')}}" alt="" />
     </div>
   </div> -->
-        </section>
-        <section class="project-details js-animated-details" data-parallax-animation="animatedDetails">
-            <div class="image-cover"
-                style="background-image: url('{{asset('frontend/assets/img/atlanta.jpg')}}'); transform: translate3d(0px, -250.873px, 0px); height:100%">
-            </div>
+</section>
+<section class="project-details js-animated-details" data-parallax-animation="animatedDetails">
+   <div class="image-cover" style="background-image: url('{{asset('frontend/assets/img/atlanta.jpg')}}'); transform: translate3d(0px, -250.873px, 0px); height:100%"></div>
 
-            <div class="container is-wide row">
-                <div class="location client">
-                    <img src="{{asset('frontend/assets/img/icon-city.svg')}}" alt="City icon" class="city-icon">
-                    <h5 class="client-location">Client’s Location</h5>
-                    <div class="city">Andheri East</div>
-                    <div class="region">Mumbai</div>
-                </div>
-                <div class="team">
-                    <img src="{{asset('frontend/assets/img/icon-team.svg')}}" alt="Team icon"
-                        class="icon-team team-ico team-ico-ipad">
-                    <h5 style="margin-bottom:-5px;" class="tech-team">Tech Simians Team</h5>
-                    <div style="margin-bottom:20px">
-                        <div class="title" style="color:white;">17 Engineers</div>
-                        <!-- <div class="title" style="color:white;">2 Designers</div> -->
-                        <!-- <div class="title" style="color:white;">1 Product Manager</div>
+  <div class="container is-wide row">
+    <div class="location client">
+      <img src="{{asset('frontend/assets/img/icon-city.svg')}}" alt="City icon" class="city-icon">
+      <h5 class="client-location">Client’s Location</h5>
+      <div class="city">Andheri East</div>
+      <div class="region">Mumbai</div>
+    </div>
+    <div class="team">
+      <img src="{{asset('frontend/assets/img/icon-team.svg')}}" alt="Team icon"  class="icon-team team-ico team-ico-ipad">
+      <h5 style="margin-bottom:-5px;" class="tech-team">Tech Simians Team</h5>
+     <div style="margin-bottom:20px">
+     <div class="title" style="color:white;">17 Engineers</div>
+      <!-- <div class="title" style="color:white;">2 Designers</div> -->
+      <!-- <div class="title" style="color:white;">1 Product Manager</div>
       <div class="title" style="color:white;">1 Engineering Manager</div> -->
-                        <div class="title" style="color:white;">1 QA Engineer</div>
-                    </div>
-                </div>
-                <div class="timeline time">
-                    <img src="{{asset('frontend/assets/img/icon-timeline.svg')}}" style="margin-top:-159px"
-                        alt="Timeline icon">
-                    <h5 class="time-line">Timeline</h5>
-                    <div class="start-date">January 2014</div>
-                    <div class="arrow">
-                        <img src="{{asset('frontend/assets/img/arrow.svg')}}" alt="Arrow">
-                    </div>
-                    <div class="end-date">Now</div>
-                </div>
-            </div>
-        </section>
+      <div class="title" style="color:white;">1 QA Engineer</div>
+     </div>
+    </div>
+    <div class="timeline time">
+      <img src="{{asset('frontend/assets/img/icon-timeline.svg')}}"  style="margin-top:-159px" alt="Timeline icon">
+      <h5 class="time-line">Timeline</h5>
+      <div class="start-date">January 2014</div>
+      <div class="arrow">
+        <img src="{{asset('frontend/assets/img/arrow.svg')}}" alt="Arrow">
+      </div>
+      <div class="end-date">Now</div>
+    </div>
+  </div>
+</section>
 
-        <style>
-        /* Media query for tablet-sized screens */
-        @media (min-width: 768px) and (max-width: 991px) {
-            .team-ico-ipad {
-                margin-top: -154px;
-            }
-        }
-        </style>
-        <style>
-        /* Responsive CSS for mobile devices */
-        @media screen and (max-width: 767px) {
+<style>
 
-            /* Define a class for the container that wraps the three columns */
-            .container.is-wide.row {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: flex-start;
-            }
+  /* Media query for tablet-sized screens */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .team-ico-ipad {
+      margin-top: -154px;
+    }
+  }
+</style>
+<style>
+  /* Responsive CSS for mobile devices */
+@media screen and (max-width: 767px) {
+  /* Define a class for the container that wraps the three columns */
+  .container.is-wide.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-            /* Adjust the column width for mobile devices */
-            .container.is-wide.row>div {
-                width: 100%;
-                /* Take the full width on mobile */
-                margin: 10px 0;
-                /* Add some vertical spacing between columns */
-            }
+  /* Adjust the column width for mobile devices */
+  .container.is-wide.row > div {
+    width: 100%; /* Take the full width on mobile */
+    margin: 10px 0; /* Add some vertical spacing between columns */
+  }
 
-            /* Center the text inside each column */
-            .container.is-wide.row h5,
-            .container.is-wide.row .title {
-                text-align: center;
-            }
+  /* Center the text inside each column */
+  .container.is-wide.row h5,
+  .container.is-wide.row .title {
+    text-align: center;
+  }
 
-            /* Optional: Adjust icon size on mobile for better display */
-            .container.is-wide.row img {
-                width: 80px;
-                height: 80px;
-                margin-left: 130px;
-            }
+  /* Optional: Adjust icon size on mobile for better display */
+  .container.is-wide.row img {
+    width: 80px;
+    height: 80px;
+    margin-left: 130px;
+  }
 
-            /* Optional: Reduce the bottom margin of the 'Timeline' column to align better */
-            .timeline {
-                margin-bottom: 0;
-            }
-        }
-        </style>
-        <style>
-        @media (max-width: 767px) {
-            .city-icon {
-                margin-top: -30px;
-            }
+  /* Optional: Reduce the bottom margin of the 'Timeline' column to align better */
+  .timeline {
+    margin-bottom: 0;
+  }
+}
 
-            .client {
-                margin-top: 170px !important;
-            }
+</style>
+<style>
+  @media (max-width: 767px) {
+    .city-icon {
+      margin-top: -30px;
+    }
+    .client {
+      margin-top: 170px!important;
+    }
+    .team-ico {
+      margin-left: 113px!important;
+      margin-top: -168px!important;
+    }
+    .time {
+      margin-left:20px!important;
+    }
+    .project-1 {
+      margin-top: 12px!important;
+    }
 
-            .team-ico {
-                margin-left: 113px !important;
-                margin-top: -168px !important;
-            }
+  }
+  @media (min-width: 820px) {
+    .city-icon {
+      margin-top: -160px;
+      /* margin-left: 136px; */
+    }
 
-            .time {
-                margin-left: 20px !important;
-            }
+    .team-ico {
+      margin-top: -272px!important;
+    }
 
-            .project-1 {
-                margin-top: 12px !important;
-            }
+    .tech-team {
+      margin-top: 30px;
+    }
 
-        }
+    .time-line {
+      margin-top: 32px;
+    }
 
-        @media (min-width: 820px) {
-            .city-icon {
-                margin-top: -160px;
-                /* margin-left: 136px; */
-            }
+  }
 
-            .team-ico {
-                margin-top: -272px !important;
-            }
+ 
+</style>
+<style>
+  @media (min-width: 767px) {
+    .client-location {
+      margin-top: 25px;
+    }
 
-            .tech-team {
-                margin-top: 30px;
-            }
+    .icon-team {
+      margin-top: -66px;
+    }
+  }
 
-            .time-line {
-                margin-top: 32px;
-            }
+  @media (min-width: 768px) {
+    .icon-team {
+      /* Add your desired margin-top value for desktop here */
+      margin-top: -225px;
+      margin-left: 26px;
+    }
+  }
+</style>
 
-        }
-        </style>
-        <style>
-        @media (min-width: 767px) {
-            .client-location {
-                margin-top: 25px;
-            }
-
-            .icon-team {
-                margin-top: -66px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .icon-team {
-                /* Add your desired margin-top value for desktop here */
-                margin-top: -225px;
-                margin-left: 26px;
-            }
-        }
-        </style>
-        <section class="testimonials-list">
-            <div class="container is-wide">
-                <div class="project-testimonial">
-                    <div class="customer">
-                        <img src="{{asset('frontend/assets/img/dummy.png')}}"
-                            srcset="{{asset('frontend/assets/img/dummy.png 2x')}}" class="avatar" alt="Tope Awotona">
-                        <div class="info">
-                            <div class="reviews-block-author-title">Doe John</div>
-                            <div class="reviews-block-author-label">Founder &amp; CEO</div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p class="testimonial-text"><q>Firstly, I have to say Techsimians Inception is not an easy
-                                thing. But by doing it, I saved money, time and perfected my product vision. Let me
-                                explain how - this 2-day collaboration process is all about knowledge transfer, looking
-                                at the product from different angles, sorting out and prioritizing the details. <br><br>
-                                Part of this process is also bringing up potential risks: technical, business etc. Even
-                                though I had spent 6 months prior to the Inception conceiving what I thought was that
-                                perfect application, we still uncovered several risks during the Inception that led me
-                                to reconsider my initial product vision. That is the value of the Techsimians Inception!
-                                Without the Inception, we would have wasted precious development resources on the wrong
-                                things. The Inception has helped avoid that waste of time and money.</q></p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="testimonials-list">
+  <div class="container is-wide"> 
+    <div class="project-testimonial">
+      <div class="customer">
+        <img src="{{asset('frontend/assets/img/dummy.png')}}" srcset="{{asset('frontend/assets/img/dummy.png 2x')}}" class="avatar" alt="Tope Awotona">
+        <div class="info">
+          <div class="reviews-block-author-title" style="color: #000">Aditya Darooka</div>
+          <div class="reviews-block-author-label">Darwin Travel Tech Pvt. Ltd.</div>
+        </div>
+      </div>
+      <div class="description">
+        <p class="testimonial-text"><q>Hi, my name is Aditya, and we've been working with Tech Simians for almost five years now, and I think the team is very knowledgeable. More importantly, they would understand your requirement properly and accordingly suggest the right solution for your need. I would highly recommend Tech Simians to any company.</q></p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 
-        <!-- <section class="project__section">
+<!-- <section class="project__section">
   <div class="project__grid">
  
     <div class="project__grid-item">
@@ -224,82 +224,82 @@
     </div>
   </div>
 </section>  -->
-        <!DOCTYPE html>
-        <html lang="en">
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Project Section</title>
-            <!-- Include Bootstrap CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-            <style>
-            /* Custom CSS to make images 100% width of their columns */
-            .project__grid-item img {
-                width: 130%;
-                height: 50%;
-            }
-            </style>
-        </head>
-
-        <body>
-
-            <section class="">
-
-                <div class="row">
-                    <div class="col-6">
-                        <div class="project__grid-item">
-                            <img src="{{asset('frontend/assets/img/project-1_2.png')}}" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="">
-                            <img src="{{asset('frontend/assets/img/project-1_3.png')}}" alt="" />
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- Include Bootstrap JS (optional) -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        </body>
-
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Section</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS to make images 100% width of their columns */
+    .project__grid-item img {
+      width: 1500px!important;
+      height: 50%!impoertant;
+      display:block!important;
+    }
 
 
+  </style>
+</head>
+<body>
 
-        <style>
-        .project__section {
-            display: flex;
-            justify-content: center;
-        }
+  <section class="">
+   
+      <div class="row container image-row" >
+        <div class="col-lg-6">
+          <div class="project__grid-item">
+            <img src="{{asset('frontend/assets/img/work-1.png')}}" alt="" width= 100%!important; height=100%;  />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="project__grid-item">
+            <img src="{{asset('frontend/assets/img/work-2.png')}}" alt="" width= 100%!important; height=100%; />
+          </div>
+        </div>
+      </div>
+    
+  </section>
+<!-- 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
 
-        .project__grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-        }
 
-        .project__grid-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        .project__grid-item img {
-            max-width: 100%;
-        }
-        </style>
+<style>
+  .project__section {
+  display: flex;
+  justify-content: center;
+}
 
-        <!DOCTYPE html>
-        <html lang="en">
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
 
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Responsive Card Layout</title>
-            <!-- <style>
+.project__grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__grid-item img {
+  max-width: 100%;
+}
+
+</style>
+
+      <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Card Layout</title>
+  <!-- <style>
     .project-technologies .container {
       display: flex;
       flex-wrap: wrap;
@@ -360,8 +360,84 @@
     }
   </style> -->
 
-         
-    <!DOCTYPE html>
+  <style>
+  .project-technologies .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .project-technologies .column {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+
+  .project-technologies .item {
+    background-color: #fff!important;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  
+        
+  .project-technologies .section-title {
+    color: black;
+    font-size: 20px;
+    margin-left: 40px;
+  }
+
+  .project-technologies .card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+    margin-top: 4px;
+  }
+
+  
+
+  .project-technologies .card-image {
+    width: 50px;
+    height: 60px;
+    background-size: 50% auto !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .project-technologies .card-title {
+    margin-top: 10px;
+    margin-left: 15px;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  h1 {
+    color: black !important;
+  }
+
+  /* Media query for mobile devices (max-width: 767px) */
+  @media (max-width: 767px) {
+    .project-technologies .column {
+      flex: 0 0 calc(100% - 20px); /* Show one card in a single column for mobile */
+    }
+  }
+
+  @media (min-width: 892px) {
+    .card {
+            width: 50%;
+            height: 80%;
+          
+        }
+
+        
+  }
+</style>
+
+</head>
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <!-- Your head content goes here -->
@@ -369,18 +445,18 @@
 <body>
     <section class="project-technologies">
         <div class="container">
-            <div class="item is-technologies">
-                <h3 class="technologies" style="color:black;font-size:46px!important; text-align:center;">Technologies</h3>
-                <div class="tech-list">
+        <div class="item is-technologies">
+  <h3 class="technologies" style="color:black;font-size:46px!important; text-align:center;">Technologies</h3>
+  <div class="tech-list">
                     <!-- Technologies images -->
                     <!-- <div class="tech-item" style="background-image: url(/frontend/assets/img/rails.svg)"> <span class="tech-text">React</span> </div> -->
                     <div class="tech-item">
                     <div class="tech-item" style="background-image: url(/frontend/assets/img/rails.svg);"></div>
-                    <p class="tech-title">Ruby on Rails</p>
+                    <p class="tech-title">Rails</p>
                    </div>
                     <div class="tech-item">
-                    <div class="tech-item" style="background-image: url(/frontend/assets/img/ruby.svg);"></div>
-                    <h3 class="tech-title">Ruby</h3>
+                    <div class="tech-item" style="background-image: url(/frontend/assets/img/ruby.svg); margin-top:25px;"></div>
+                    <h3 class="tech-title" style="margin-top:30px!important;">Ruby</h3>
                    </div>
                     <div class="tech-item">
                     <div class="tech-item" style="background-image: url(/frontend/assets/img/javascript.svg);"></div>
@@ -419,13 +495,18 @@
                     <h3 class="tech-title">Kubernetes</h3>
                    </div>
                     <div class="tech-item">
+                    <div class="tech-item" style="background-image: url(/frontend/assets/img/jira.svg);"></div>
+                    <h3 class="tech-title">Jira</h3>
+                   </div>
+                    <!-- <div class="tech-item">
                     <div class="tech-item" style="background-image: url(/frontend/assets/img/mysql2.png);"></div>
                     <h3 class="tech-title">MySQL</h3>
-                   </div>
+                   </div> -->
                  
                   
                 </div>
-            </div>
+ 
+</div>
             <div class="item is-integrations">
                 <h3 class="integration" style="color:black;font-size:46px!important; text-align:center;">Integrations</h3>
                 <div class="tech-list">
@@ -482,19 +563,41 @@
     </section>
 
     <style>
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.tech-item {
+  flex-basis: calc(33.33% - 20px); /* Adjust the width as needed and consider margin */
+  margin-bottom: 20px; /* Add some margin between items */
+  text-align: center;
+}
+
+.tech-item-image {
+  width: 60px; /* Adjust the image size as needed */
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 10px; /* Center the image horizontally */
+}
+
       @media (max-width: 768px){
       .integration {
         margin-top: 105px!important;
-        margin-left: 72px!important;
+        /* margin-left: -1px!important; */
       }
       }
       @media (max-width: 768px){
       .technologies {
-        margin-left: 72px!important;
+        /* margin-left: 72px!important; */
       }
       }
 
-      .tech-item {
+      /* .tech-item {
     flex-basis: calc(50% - 20px);
     margin: 10px;
     padding: 20px;
@@ -503,14 +606,14 @@
     background-position: center;
     text-align: center;
     margin-top: 30px!important;
-}
+} */
 
 
-.tech-list {
+/* .tech-list {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Distribute items evenly in two columns */
-}
+} */
 
         .tech-item {
             flex-basis: calc(50% - 20px);
@@ -525,7 +628,7 @@
         .project-technologies {
             overflow: hidden;
             padding: 115px 0;
-            background-color: #ffffff;
+            background-color: #ffffff!important;
             font-size: 17px;
             font-family: "Poppins Regular", Helvetica, sans-serif;
         }
@@ -543,6 +646,7 @@
         /* Add media queries if necessary to handle responsiveness */
         @media screen and (max-width: 768px) {
             .item {
+              margin-top: 12px;
                 width: 100%; /* On smaller screens, make each item occupy the full width */
             }
         }
@@ -550,51 +654,58 @@
         .tech-item {
     height: 60px; /* Set the height of the image div */
     width: 60px; /* Set the width of the image div */
-    margin: 0 auto 20px; /* Add bottom margin to create spacing between the image and title */
+    margin: 35 auto 20px; /* Add bottom margin to create spacing between the image and title */
 }
 
 .tech-title {
     margin-top: -20px; /* Remove default margin of h3 to create spacing between the image and title */
-    font-size: 17px;
+    font-size: 18px;
     font-family: "Poppins Regular",Helvetica,sans-serif;
     color: #343639;
+}
+
+@media (max-width: 768px) {
+  .tech-title {
+    margin-top: -20px; /* Remove default margin of h3 to create spacing between the image and title */
+    font-size: 14px;
+    font-family: "Poppins Regular",Helvetica,sans-serif;
+    color: #343639;
+}
 }
     </style>
 </body>
 </html>
 
   </body>
-    
 
-      
-        <section class="alsolike">
-            <div class="workgrid container">
-                <h2 class="alsolike__title">You may also like this</h2>
 
-                <div class="workgrid__row">
-                    <a href="{{url('our-work-detail')}}" class="workgrid__item">
-                        <div class="workgrid__img">
-                            <img src="{{asset('frontend/assets/img/our-work_1.png')}}" alt="" />
-                        </div>
-                        <div class="workgrid__item-title">Air Book</div>
-                        <div class="workgrid__item-text">
-                            Private Jet booking platform
-                        </div>
-                        <div class="workgrid__item-cta">See More</div>
-                    </a>
-                    <a href="{{url('our-work-detail')}}" class="workgrid__item">
-                        <div class="workgrid__img">
-                            <img src="{{asset('frontend/assets/img/our-work_3.png')}}" alt="" />
-                        </div>
-                        <div class="workgrid__item-title">Trader X</div>
-                        <div class="workgrid__item-text">A first polygon 3d website</div>
-                        <div class="workgrid__item-cta">See More</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-        </main>
+      <section class="alsolike">
+        <div class="workgrid container">
+          <h2 class="alsolike__title">You may also like this</h2>
 
+          <div class="workgrid__row">
+            <a href="{{url('our-work-detail-2')}}" class="workgrid__item">
+              <div class="workgrid__img">
+                <img src="{{asset('frontend/assets/img/work-3.png')}}" alt="" />
+              </div>
+              <div class="workgrid__item-title">Document Management Systems</div>
+              <div class="workgrid__item-text">
+                It is all about Document Management Systems 
+              </div>
+              <div class="workgrid__item-cta">See More</div>
+            </a>
+            <a href="{{url('our-work-detail-3')}}" class="workgrid__item">
+              <div class="workgrid__img">
+                <img src="{{asset('frontend/assets/img/work-6.png')}}" alt="" />
+              </div>
+              <div class="workgrid__item-title">Trip  Darwin</div>
+              <div class="workgrid__item-text">Tripdarwin is a comprehensive platform designed to cater to all your travel needs.</div>
+              <div class="workgrid__item-cta">See More</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
 
 
 
@@ -602,220 +713,222 @@
 
 
 
-        <style>
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
 
-        .column {
-            flex-basis: calc(50% - 20px);
-        }
+<style>
+    .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-        .item {
-            margin-bottom: 40px;
-        }
+.column {
+  flex-basis: calc(50% - 20px);
+}
 
-        .tech-list {
-            display: flex;
-            flex-wrap: wrap;
-            margin: -10px;
-        }
+.item {
+  margin-bottom: 40px;
+}
 
-        .tech-item {
-            width: calc(33.33% - 20px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            color: black;
-            text-align: center;
-        }
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: -10px; */
+}
 
-        .tech-image {
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
-            width: 60px;
-            height: 60px;
-        }
+/* .tech-item {
+  width: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  color: black;
+  text-align: center;
+} */
 
-        .tech-title {
-            margin-top: 10px;
-        }
+.tech-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+}
 
-        h3 {
-            margin-bottom: 20px;
-            font-size: 44px;
-        }
+.tech-title {
+  margin-top: 12px;
+}
 
-        .project-technologies {
-            background-color: #f5f5f5;
-            padding: 40px 0;
-        }
-        </style>
-        <style>
-        .project-details {
-            position: relative;
-            overflow: hidden;
-            padding: 50px 0;
-        }
+h3 {
+  margin-bottom: 20px;
+  font-size: 44px;
+}
 
-        .image-cover {
-            position: absolute;
-            top: 273px;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background-size: cover;
-            background-position: center;
-        }
+.project-technologies {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+}
 
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
+</style>
+<style>
+  .project-details {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+}
 
-        .container h5,
-        .container .title {
-            color: #000;
-        }
+.image-cover {
+  position: absolute;
+  top: 273px;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+}
 
-        .location,
-        .team,
-        .timeline {
-            text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
 
-        .js-animated-details .location,
-        .js-animated-details .team,
-        .js-animated-details .timeline {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.container h5,
+.container .title {
+  color: #000;
+}
 
-        .location img,
-        .team img,
-        .timeline img {
-            width: 100px;
-            height: 100px;
-        }
+.location,
+.team,
+.timeline {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-        h5 {
-            margin-top: 20px;
-            font-size: 18px;
-        }
+.js-animated-details .location,
+.js-animated-details .team,
+.js-animated-details .timeline {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-        .city,
-        .region,
-        .title {
-            margin-top: 10px;
-        }
+.location img,
+.team img,
+.timeline img {
+  width: 100px;
+  height: 100px;
+}
 
-        .arrow img {
-            width: 30px;
-            height: 30px;
-            transform: rotate(360deg);
-        }
+h5 {
+  margin-top: 20px;
+  font-size: 18px;
+}
 
-        .timeline .arrow {
-            display: flex;
-            align-items: center;
-        }
+.city,
+.region,
+.title {
+  margin-top: 10px;
+}
 
-        .start-date,
-        .end-date {
-            font-weight: bold;
-        }
-        </style>
+.arrow img {
+  width: 30px;
+  height: 30px;
+  transform: rotate(360deg);
+}
 
+.timeline .arrow {
+  display: flex;
+  align-items: center;
+}
 
+.start-date,
+.end-date {
+  font-weight: bold;
+}
 
-        <style>
-        .testimonials-list {
-            background-color: #f8f8f8;
-            padding: 50px 0;
-            margin-top: -24px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .project-testimonial {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .customer {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-
-        .info {
-            font-family: Arial, sans-serif;
-        }
-
-        .reviews-block-author-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .reviews-block-author-label {
-            color: #777;
-        }
-
-        .description {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #000;
-        }
-
-        .testimonial-text {
-            margin-bottom: 10px;
-        }
-
-        /* Animation */
-        .js-animated-testimonials .project-testimonial {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .js-animated-testimonials.animatedTestimonials .project-testimonial {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        </style>
+</style>
 
 
-</body>
 
+<style>
+   .testimonials-list {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+  margin-top: -24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.project-testimonial {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info {
+  font-family: Arial, sans-serif;
+}
+
+.reviews-block-author-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reviews-block-author-label {
+  color: #777;
+}
+
+.description {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color:#000;
+}
+
+.testimonial-text {
+  margin-bottom: 10px;
+}
+
+/* Animation */
+.js-animated-testimonials .project-testimonial {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.js-animated-testimonials.animatedTestimonials .project-testimonial {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+
+  </body>
 </html>
-
 
 @include('frontend.layouts.footer')

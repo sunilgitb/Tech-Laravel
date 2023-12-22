@@ -1,9 +1,12 @@
 @extends('frontend.layouts.app')
 @include('frontend.layouts.header')
+@section('title', '')
+
+@section('meta_description', 'We are a corporate web agency with a dynamic team of creative, intelligent, and enthusiastic individuals. We foster an environment of continuous inspiration and growth, encouraging each other to strive for excellence and happiness in all that we do.')
 
     <section class="banner">
       <div class="banner__shadowtext">Tech<br />Simians</div>
-      <div class="banner__text">Smart Sapians on duty</div>
+      <div class="banner__text">Smart Sapiens on duty</div>
       <div class="banner__subtext">We are corporate web agency</div>
       <div class="banner__img">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="enable-background:new 0 0 1920 1080" viewBox="0 0 1920 1080">
@@ -241,55 +244,138 @@
           </svg>
       </div>
     </section>
-    <section class="partners">
-      <img src="{{asset('frontend/assets/img/partner-logos.png')}}" alt="Partners Logos" />
-    </section>
 
-    <h5 class="typing" id="typing"></h5>
-    <style>
-      *,
-*:before,
-*:after {
-  box-sizing: border-box;
+ 
+
+   
 
 
+
+
+<section >
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-7.png')}}" height="80" width="80" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-6.png')}}" height="70" width="80" alt="" style="margin-top:10px!important;" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-2.png')}}" height=70" width=70" alt="" style="margin-top:10px!important;" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-3.png')}}" height="80" width="80" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-4.png')}}" height="50" width="80" alt="" style="margin-top:30px!important;" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-5.png')}}" height="70" width="70" alt="" style="margin-top:10px!important;"/>
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-8.png')}}" height="70" width="70" alt="" style="margin-top:10px!important;"/>
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-9.png')}}" height="50" width="80" alt="" style="margin-top:30px!important;" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-3.png')}}" height="80" width="80" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-4.png')}}" height="50" width="80" alt=""style="margin-top:30px!important;" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-5.png')}}" height="70" width="70" alt="" style="margin-top:10px!important;" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-2.png')}}" height="70" width="70" alt="" style="margin-top:10px!important;"/>
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-9.png')}}" height="50" width="80" alt="" style="margin-top:30px!important;" />
+      </div>
+      <div class="slide">
+        <img src="{{('frontend/assets/img/logo-ts-7.png')}}" height="80" width="80" alt="" />
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="{{('frontend/assets/img/logo-ts-7.png')}}" height="80" width="80" alt="" />
+    </div>
+    <div class="slide">
+      <img src="{{('frontend/assets/img/logo-ts-6.png')}}" height="70" width="80" alt="" style="margin-top:10px!important;" />
+    </div>
+    <div class="slide">
+      <img src="{{('frontend/assets/img/logo-ts-2.png')}}" height=70" width=70" alt="" style="margin-top:10px!important;" />
+    </div>
+    <div class="slide">
+      <img src="{{('frontend/assets/img/logo-ts-3.png')}}" height="80" width="80" alt="" />
+    </div>
+    <div class="slide">
+      <img src="{{('frontend/assets/img/logo-ts-4.png')}}" height="50" width="80" alt="" style="margin-top:30px!important;" />
+    </div>
+    <div class="slide">
+      <img src="{{('frontend/assets/img/logo-ts-5.png')}}" height="70" width="70" alt="" style="margin-top:10px!important;"/>
+    </div>  
+  </div>
+</section>
+
+<style>
+.slider {
+background: #20c99;
+background-color:trasparent;
+box-shadow: 0 0px 0px -5px rgba(0, 0, 0, .125);
+height: 100px;
+margin: auto;
+margin-top:135px!important;
+overflow: hidden;
+position: relative;
+width: 100%;
 }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #fff;
+.slider::before,
+.slider::after {
+content: "";
+height: 80px;
+position: absolute;
+width: 200px;
+z-index: 2;
 }
 
-.typing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    color: #0047ff;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 5vw;
+.slider::after {
+right: 0;
+top: 0;
+transform: rotateZ(180deg);
 }
 
-#typing::after {
-    content: '|';
-    position: relative;
-    right: 0;
-    animation: blink 1s step-end infinite;
+.slider::before {
+left: 0;
+top: 0;
 }
 
-@keyframes blink {
-    from, to {
-        color: transparent
-    }
-    50% {
-        color: yellow;
-    }
+.slide-track {
+animation: scroll 60s linear infinite;
+display: flex;
+width: calc(250px * 14);
 }
-    </style>
+
+.slide {
+height: 80px;
+width: 25''0px;
+}
+
+@keyframes scroll {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(calc(-250px * 7));
+}
+}
+
+</style>  
+
+
   <script>
   const greeting = ['Welcome To Tech Simians', 'The Best IT Solutions in Mumbai'];
 let currentGreetingIndex = 0;
@@ -397,6 +483,111 @@ typeWriterEffect();
 }
 
 </style>
+{{-- <section>
+
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;"></li>" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;"" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;"" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;"" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="{{asset('frontend/assets/img/logo-ts-7.png')}}" class="logo-image" style="height: 80px!important; width: 80px!important; margin-top:20px!important;" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="http://www.mamatafabrics.com/resources/img/product-logo/kapaas.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="http://www.mamatafabrics.com/resources/img/product-logo/creta.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="http://www.mamatafabrics.com/resources/img/product-logo/black.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="http://www.mamatafabrics.com/resources/img/product-logo/cotton-club.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="http://www.mamatafabrics.com/resources/img/product-logo/ashwini.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="http://www.mamatafabrics.com/resources/img/product-logo/red.png" height="100" width="250" alt="" />
+      </div>
+    </div>
+  </div>
+</section> --}}
+
+<style>
+  /* body {
+  align-items: center;
+  background: #e3e3e3;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+} */
+/* @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+  animation-timing-function: steps(1); /* Change to steps for abrupt transition */
+}
+.slider {
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(0deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 50s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+  animation-fill-mode: forwards; /* Retain last keyframe styles */
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+  padding-left: 20px;
+}
+</style> 
+
+
     <section class="whoweare">
       <h2 class="heading">Who we are</h2>
       <p class="subheading">
@@ -405,11 +596,11 @@ typeWriterEffect();
       <div class="whoweare__item">
         <div class="whoweare__animation">
           <div class="whoweare__circle">
-            <img src="img/circle.svg" alt="" />
+            <img src="{{asset('frontend/assets/img/circle.svg')}}" alt="" />
           </div>
-          <div class="whoweare__line">
-            <img src="{{asset('frontend/assets/img/line-with-right-curve.svg')}}" alt="" />
-          </div>
+            <div class="whoweare__line">
+              <img src="{{asset('frontend/assets/img/line-with-right-curve.svg')}}" alt="" />
+            </div>
           <div class="whoweare__icon">
             <lottie-player
               id="firstLottie"
@@ -434,7 +625,7 @@ typeWriterEffect();
             <img src="{{asset('frontend/assets/img/circle.svg')}}" alt="" />
           </div>
           <div class="whoweare__line">
-            <img src="img/line-with-left-curve.svg" alt="" />
+            <img src="{{asset('frontend/assets/img/line-with-left-curve.svg')}}" alt="" />
           </div>
           <div class="whoweare__icon">
             <lottie-player
@@ -456,7 +647,7 @@ typeWriterEffect();
       <div class="whoweare__item">
         <div class="whoweare__animation">
           <div class="whoweare__circle">
-            <img src="img/circle.svg" alt="" />
+            <img src="{{asset('frontend/assets/img/circle.svg')}}" alt="" />
           </div>
           <div class="whoweare__line">
             <img src="{{asset('frontend/assets/img/line-with-right-curve.svg')}}" alt="" />
@@ -509,9 +700,9 @@ typeWriterEffect();
     <section class="whatwedo">
       <h2 class="heading">What we do</h2>
       <p class="subheading">
-       <q>
+     
        With our tagline, 'Smart Sapiens On Duty,' our primary goal is to deliver the utmost satisfaction to our esteemed clients. Our unwavering determination is to revolutionize the perception of IT services by consistently offering top-notch solutions that surpass expectations and elevate industry standards
-       </q>
+      
       </p>
       <div class="whatwedo__item">
         <div class="whatwedo__content">
@@ -632,6 +823,11 @@ typeWriterEffect();
         </div>
       </div>
     </section>
+
+    {{-- <section class="partners" style="background-color:#fff;">
+      <img src="{{asset('frontend/assets/img/partner-logos.png')}}" alt="Partners Logos" />
+    </section> --}}
+
     <section class="whychooseus">
       <h2 class="heading">Why choose us</h2>
       <div class="whychooseus__row">
@@ -639,7 +835,7 @@ typeWriterEffect();
           <div class="whychooseus__icon">
             <img src="{{('frontend/assets/img/customer-support.svg')}}" alt="Customer Support Icon" />
           </div>
-          <h3 class="whychooseus__item-title">12x7<br>Customer<br>Support</h3>
+          <h3 class="whychooseus__item-title choose_us">12x7<br>Customer<br>Support</h3>
           <div class="whychooseus__item-text">
           Expertise and Professionalism: We have a team of highly skilled professionals with extensive expertise in their respective domains. Our experienced workforce is well-versed in the latest technologies and industry best practices, ensuring the delivery of cutting-edge solutions tailored to your specific needs.
           </div>
@@ -648,7 +844,7 @@ typeWriterEffect();
           <div class="whychooseus__icon">
             <img src="{{asset('frontend/assets/img/experience.svg')}}" alt="Customer Support Icon" />
           </div>
-          <h3 class="whychooseus__item-title">6 Years<br>
+          <h3 class="whychooseus__item-title choose_us">6 Years<br>
               of<br>
               Experience</h3>
           <div class="whychooseus__item-text">
@@ -659,7 +855,7 @@ typeWriterEffect();
           <div class="whychooseus__icon">
             <img src="{{asset('frontend/assets/img/best-prices.svg')}}" alt="Customer Support Icon" />
           </div>
-          <h3 class="whychooseus__item-title">Best<br>
+          <h3 class="whychooseus__item-title choose_us">Best<br>
               Price</br>
               Assured</h3>
           <div class="whychooseus__item-text">
@@ -668,69 +864,256 @@ typeWriterEffect();
         </div>
       </div>
     </section>
+
+  
+<div class="footer-brand-logos">
+
+  <!-- TOPSHOP -->
+
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/angular-22.png')}}" alt="The Room" height="150" width="150">
+  </a>
+
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/node.png')}}" alt="TOPSHOP" height="150" width="150">
+  </a>
+
+  <!-- TOPMAN -->
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/mongo.png')}}" alt="TOPMAN" height="350" width="150" style="margin-right:20px!important;">
+  </a>
+
+  <!-- BEAUTY the Guide -->
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/aws.png')}}" alt="BEAUTY the Guide" style="margin-top:40px;" height="100" width="100">
+  </a>
+
+  <!-- The Room -->
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/google-cloud-new.png')}}" alt="The Room"  height="150" width="150">
+  </a>
+
+  <!-- Kleinfeld -->
+ 
+</div>
+<div class="footer-brand-logos" style="marigin-top:10px;">
+
+  <!-- TOPSHOP -->
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/digital-ocean.png')}}" alt="The Room"  height="150" width="150">
+  </a>
+  <!-- TOPMAN -->
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/android-5.png')}}" height="250" width="150" style="margin-left:20px!important;">
+  </a>
+
+  <!-- BEAUTY the Guide -->
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/apple2.png')}}" alt="BEAUTY the Guide" style="margin-left:49px!important">
+  </a>
+  {{-- <a href="/webapp/wcs/stores/servlet/en/thebay/brand/TOPMAN">
+    <img src="{{asset('frontend/assets/img/mongo.png')}}" alt="TOPMAN">
+</a> --}}
+
+  <!-- The Room -->
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/mysql-new.png')}}" alt="TOPSHOP"  height="250" width="150" style="margin-left:80px!important;">
+  </a>
+
+  <a href="#">
+      <img src="{{asset('frontend/assets/img/heroku-new.png')}}" alt="TOPSHOP"  height="150" width="150">
+  </a>
+  <!-- Kleinfeld -->
+ 
+
+</div>
+<!-- END FOOTER BRAND LOGOS -->
+
+
+<style>
+  @media(max-width:768px){
+    .footer-brand-logos{
+      display:none;
+    }
+  }
+    .footer-brand-logos {
+      margin: 0 auto;
+      width: 100%; 
+      height: 130px; 
+      text-align: justify;
+      background-color: #f0f0f0; 
+  }
+
+  .footer-brand-logos:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+  }
+
+  .footer-brand-logos * {
+      padding: 0;
+      margin: 0;
+  }
+
+  .footer-brand-logos img {
+      height: 56px;        
+  }
+
+  .footer-brand-logos a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 20px;
+  }
+</style>
+  
     <section class="ourwork">
       <h2 class="heading">Our work</h2>
       <div class="ourwork__subtitle">We create products only on the basis of user experience and only covering the needs of the user.</div>
+      <div class="ourwork__scroll-container">
       <div class="ourwork__row">
         <div class="ourwork__item">
           <div class="ourwork__img">
-            <img src="{{asset('frontend/assets/img/our-work-1.png')}}" alt="Be Untouchables">
+            <img src="{{asset('frontend/assets/img/work-9-1.png')}}" alt="Be Untouchables">
           </div>
-          <a href="#" class="ourwork__hover-text">View Project</a>
+          <a href="{{url('our-work-detail-5')}}" class="ourwork__hover-text">View Project</a>
         </div>
         <div class="ourwork__item">
           <div class="ourwork__img">
-              <img src="{{asset('frontend/assets/img/our-work-2.png')}}" alt="Be Untouchables">
+              <img src="{{asset('frontend/assets/img/work-2-1.png')}}" alt="image">
           </div>
           <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
         </div>
         <div class="ourwork__item">
           <div class="ourwork__img">
-              <img src="{{asset('frontend/assets/img/our-work-3.png')}}" alt="Be Untouchables">
+              <img src="{{('frontend/assets/img/work-3-1.png')}}" alt="Be Untouchables">
           </div>
-          <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
+          <a href="{{url('our-work-detail-2')}}" class="ourwork__hover-text">View Project</a>
         </div>
         <div class="ourwork__item">
           <div class="ourwork__img">
-              <img src="{{asset('frontend/assets/img/our-work-4.png')}}" alt="Be Untouchables">
+              <img src="{{asset('frontend/assets/img/work-8-1.png')}}" alt="Be Untouchables">
           </div>
-          <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
+          <a href="{{url('our-work-detail-3')}}" class="ourwork__hover-text">View Project</a>
         </div>
       </div>
       <div class="ourwork__row ourwork__row--second">
+        <div class="ourwork__item">
+          <div class="ourwork__img">
+              <img src="{{asset('frontend/assets/img/work-8-1.png')}}" alt="Be Untouchables">
+          </div>
+          <a href="{{url('our-work-detail-3')}}" class="ourwork__hover-text">View Project</a>
+        </div>
           <div class="ourwork__item">
             <div class="ourwork__img">
-                <img src="{{asset('frontend/assets/img/our-work-6.png')}}" alt="Be Untouchables">
+                <img src="{{asset('frontend/assets/img/work-8-1.png')}}" alt="Be Untouchables">
             </div>
             <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
           </div>
           <div class="ourwork__item">
             <div class="ourwork__img">
-                <img src="{{asset('frontend/assets/img/our-work-6.png')}}" alt="Be Untouchables">
+                <img src="{{asset('frontend/assets/img/work-6.png')}}" alt="Be Untouchables">
             </div>
-            <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
+            <a href="{{url('our-work-detail-4')}}" class="ourwork__hover-text">View Project</a>
           </div>
           <div class="ourwork__item">
             <div class="ourwork__img">
-                <img src="{{asset('frontend/assets/img/our-work-7.png')}}" alt="Be Untouchables">
+                <img src="{{asset('frontend/assets/img/work-9-1.png')}}" alt="Be Untouchables">
             </div>
-            <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
-          </div>
-          <div class="ourwork__item">
-            <div class="ourwork__img">
-                <img src="{{asset('frontend/assets/img/our-work-8.png')}}" alt="Be Untouchables">
-            </div>
-            <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
+            <a href="{{url('our-work-detail-5')}}" class="ourwork__hover-text">View Project</a>
           </div>
           <div class="ourwork__item">
               <div class="ourwork__img">
-                  <img src="{{asset('frontend/assets/img/our-work-1.png')}}" alt="Be Untouchables">
+                  <img src="{{asset('frontend/assets/img/work-9-1.png')}}" alt="Be Untouchables">
               </div>
               <a href="{{url('our-work-detail')}}" class="ourwork__hover-text">View Project</a>
             </div>
       </div>
+      <!-- <div>
+    <button class="carousel-prev"><i class="fas fa-angle-left"></i></button>
+    <button class="carousel-next"><i class="fas fa-angle-right"></i></button>
+     </div> -->
+
+      <br>
       <a href="{{url('our-work')}}" class="button button--white">View all</a> 
-    </section>
+    </section> 
+
+    
+
+   
+
+
+    <!-- <style>
+      .ourwork__scroll-container {
+  overflow-x: hidden; /* Hide horizontal overflow */
+  white-space: nowrap;
+  width: 100%; /* Ensure container takes full width */
+}
+
+.ourwork__row {
+  display: inline-block;
+}
+
+.ourwork__item {
+  display: inline-block;
+  width: 300px; /* Adjust the width of each item */
+  margin-right: 20px;
+  vertical-align: top; /* Align items at the top */
+}
+
+    </style> -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+  $(document).ready(function () {
+  var slideInterval = 3000;
+  var isAnimating = false;
+
+  function slideProjects(direction) {
+    if (isAnimating) {
+      return;
+    }
+    isAnimating = true;
+
+    var container = $('.ourwork__row');
+    var firstItem = $('.ourwork__item:first-child');
+
+    if (direction === 'next') {
+      container.animate(
+        {
+          marginLeft: -firstItem.outerWidth() + 'px',
+        },
+        500, // Adjust the slide speed as needed
+        function () {
+          firstItem.detach().appendTo(container);
+          container.css('margin-left', 0);
+          isAnimating = false;
+        }
+      );
+    } else if (direction === 'prev') {
+      var lastItem = $('.ourwork__item:last-child').detach();
+      container.prepend(lastItem);
+      container.css('margin-left', -firstItem.outerWidth() + 'px');
+      container.animate({ marginLeft: 0 }, 500, function () {
+        isAnimating = false;
+      });
+    }
+  }
+
+  $('.carousel-next').click(function () {
+    slideProjects('next');
+  });
+
+  $('.carousel-prev').click(function () {
+    slideProjects('prev');
+  });
+
+  setInterval(function () {
+    slideProjects('next');
+  }, slideInterval);
+});
+
+  </script> -->
+
     <div class="testimonials">
       <!-- Slider main container -->
         <div class="swiper testimonials__row">
@@ -748,25 +1131,25 @@ typeWriterEffect();
             <!-- Slides -->
             <div class="swiper-slide">
               <div class="testimonial__item">
-                <div class="testimonial__text">By far the best team i’ve ever worked with. The truly understood the look I was going for and completely nailed it! I would highly recommend them as a company, you simply just won’t find any better team! </div>
-                <div class="testimonial__image">
+                <div class="testimonial__text">Tech Simians has by far the most astonising team out there! I literally could not be happier that I choose you guys! Your regular updates and superb attention to detail blows me away every time I visit my new site.</div>
+                <!-- <div class="testimonial__image">
                   <img src="{{('frontend/assets/img/vishal-makadia.png')}}" alt="Vishal Makadia" />
-                </div>
-                <div class="testimonial__name">Vishal Makadia</div>
-                <div class="testimonial__designation">Owner, SKD Constructions</div>
+                </div> -->
+                <div class="testimonial__name">Guru Rekha Shri</div>
+                <div class="testimonial__designation">Founder, Kalakruti Dance Academy</div>
               </div>
             </div>
             <div class="swiper-slide">
                 <div class="testimonial__item">
-                    <div class="testimonial__text">By dsfadsf the best team i’ve ever worked with. The truly understood the look I was going for and completely nailed it! I would highly recommend them as a company, you simply just won’t find any better team!</div>
-                    <div class="testimonial__image">
+                    <div class="testimonial__text">Hi, my name is Aditya, and we've been working with Tech Simians for almost five years now, and I think the team is very knowledgeable. More importantly, they would understand your requirement properly and accordingly suggest the right solution for your need. I would highly recommend Tech Simians to any company.</div>
+                    <!-- <div class="testimonial__image">
                         <img src="{{('frontend/assets/img/vishal-makadia.png')}}" alt="Vishal Makadia" />
-                    </div>
-                    <div class="testimonial__name">Vishal Makadia</div>
-                    <div class="testimonial__designation">Owner, SKD Constructions</div>
+                    </div> -->
+                    <div class="testimonial__name">Aditya Darooka</div>
+                    <div class="testimonial__designation">Darwin Travel Tech Pvt. Ltd.</div>
                   </div>
             </div>
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
                 <div class="testimonial__item">
                     <div class="testimonial__text">By far thedd ddfd best team i’ve ever worked with. The truly understood the look I was going for and completely nailed it! I would highly recommend them as a company, you simply just won’t find any better team!</div>
                     <div class="testimonial__image">
@@ -775,7 +1158,7 @@ typeWriterEffect();
                     <div class="testimonial__name">Vishal Makadia</div>
                     <div class="testimonial__designation">Owner, SKD Constructions</div>
                   </div>
-            </div>
+            </div> -->
           </div>
         </div>
     </div>
@@ -788,8 +1171,12 @@ typeWriterEffect();
   }
 }
 
+
+
     </style>
-    <section class="ourblog">
+
+    
+    <!-- <section class="ourblog">
       
       <div class="ourblog__row">
         <div class="accordion--wrapper">
@@ -829,14 +1216,183 @@ typeWriterEffect();
         ></lottie-player>
          
       </div></div>
-    </section>
+    </section> -->
+
+ 
+
+<style>
+  /* Base styles */
+  .ourblog {
+    display: flex;
+    width: 100%;
+  }
+
+  .accordion {
+    flex: 1;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .ourblog__animation {
+    flex: 1;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .ourblog {
+      flex-direction: column;
+    }
+
+    .accordion {
+      padding-right: 0;
+    }
+  }
+  .animation-contaner {
+    display: flex;
+    flex-direction: column;
+    height: 94%;
+    width: 94%;
+  }
+</style>
+
+  <section class="ourblog">
+  
+    <div class="accordion">
+    <h2 class="ourblog__title">our Blog</h2>
+    @foreach ($posts as $post)
+      <details>
+          
+        <summary>{{$post->title}}</summary>
+        <div class="accordion--content accordion--active">
+          <div class="accordion-inner">
+            {{ \Str::limit(strip_tags($post->description), 100, '...') }} <a href="{{ route('post.show-single', ['slug' => urlencode($post->slug)]) }}">Read more</a>
+          </div>
+        </div>
+      </details>
+      @endforeach
+
+      {{-- <details>
+        <summary>7 Ways Neuromarketing Impact Marketing Campaign</summary>
+        <div class="accordion--content">
+          <div class="accordion-inner">
+            Follow these 7 Neuromarketing ways and measures to create an astonishing impact in your upcoming marketing campaign. <a href="{{url('blog')}}">Read now!</a>
+          </div>
+        </div>
+      </details> --}}
+
+      {{-- <details>
+        <summary>Can Good Design Grow Your Business And Customers?</summary>
+        <div class="accordion--content">
+          <div class="accordion-inner">
+            Follow these 7 Neuromarketing ways and measures to create an astonishing impact in your upcoming marketing campaign. <a href="{{url('blog')}}">Read now!</a>
+          </div>
+        </div>
+      </details> --}}
+    </div>
+
+  <style>
+    @media(min-width:992px){
+
+      .logo-main{
+        margin-left: 120px!important;
+      }
+    }
+  </style>
+    <div class="ourblog__animation logo-main" >
+      <lottie-player id="tenthLottie" src="https://assets2.lottiefiles.com/packages/lf20_nsj9zfuz.json"></lottie-player>
+    </div>
+  </section>
+
+
+
+<script>
+  var Accordions = (function () {
+  "use strict";
+
+  var closeOthers = function (current, parent) {
+    var opened = Array.from(parent.querySelectorAll("details[open]"));
+
+    opened.forEach(function (accordion) {
+      if (accordion === current) return;
+      accordion.removeAttribute("open");
+    });
+  };
+
+  var toggle = function (event, selector) {
+    var parent = event.target.closest(selector);
+    if (!parent) return;
+
+    if (!event.target.hasAttribute("open")) return;
+
+    closeOthers(event.target, parent);
+  };
+
+  var Constructor = function (selector) {
+    var publicAPIs = {};
+
+    var toggleHandler = function (event) {
+      toggle(event, selector);
+    };
+
+    var openFirst = function (parent) {
+      var firstAccordion = parent.querySelector("details");
+      if (firstAccordion) {
+        firstAccordion.setAttribute("open", true);
+      }
+    };
+
+    publicAPIs.destroy = function () {
+      document.removeEventListener("toggle", toggleHandler, true);
+    };
+
+    publicAPIs.init = function () {
+      if (!selector || typeof selector !== "string") {
+        throw new Error("Please provide a valid selector");
+      }
+
+      document.addEventListener("toggle", toggleHandler, true);
+
+      var parent = document.querySelector(selector);
+      if (parent) {
+        openFirst(parent);
+      }
+    };
+
+    publicAPIs.init();
+    return publicAPIs;
+  };
+
+  return Constructor;
+})();
+
+var accordion = new Accordions(".accordion");
+
+</script>
+
+<style>
+  summary { 
+  /* style the cursor to indicate on hover */
+  cursor: pointer;
+  
+  /* style the summary and make it different to details content */
+  color: #000000;
+  font-weight: bold;
+  font-size: 24px;
+}
+summary::-webkit-details-marker { 
+  /* You can style the marker in webkit and blink (Chrome, Safari) */
+    color: red;
+  list-style-image: url(''); /* use alternative icon */
+}
+
+
+
+</style> 
     <section class="connect">
         <div class="connect__title">Stay ahead of the curve and create a measurable impact on your business.</div>
         <a href="{{url('contact-us')}}" class="button button--white">Connect</a>
     </section>
-    
-  
-    
+
   </body>
 </html>
 @include('frontend.layouts.footer')

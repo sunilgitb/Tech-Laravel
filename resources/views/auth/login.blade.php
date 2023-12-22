@@ -1,37 +1,103 @@
-<x-guest-layout>
-    <div class="font-sans min-h-screen antialiased bg-blue-900 pt-24 pb-5">
-        <div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
-          <img src="{{asset('frontend/assets/img/new-logo.png')}}" heigh="100px" width="200px" style="margin-left: 10px;">
-          <!-- <h1 class="font-bold text-center text-4xl text-yellow-500">Admin<span class="text-blue-500">Login</span></h1> -->
-            <!-- Session Status -->
-            <x-auth-session-status class="mb-4" :status="session('status')" />
-            <!-- Validation Errors -->
-            <x-auth-validation-errors class="mb-4" :errors="$errors" />
-          <form method="POST" action="{{ route('admin.login') }}">
-            @csrf
-            <div class="flex flex-col bg-white p-10 rounded-lg shadow space-y-6">
-              <h1 class="font-bold text-xl text-center">Sign in to your account</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Simians</title>
+<style>
+  @media (max-width: 768px){
+    .mobile-device{
+      width:70%!important;
+      margin-left: 55px;
+    }
+    .container-fluid{
+      /* margin-left: 290px!important; */
+    }
+    .logo-image {
+      margin-left: 125px;
+      margin-top: 25px;
+    }
 
-              <div class="flex flex-col space-y-1">
-                <input type="email" name="email" id="email" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Email" :value="old('email')" required autofocus />
-              </div>
+    
+  }
 
-              <div class="flex flex-col space-y-1">
-                <input type="password" name="password" id="password" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Password" required autocomplete="current-password"/>
-              </div>
+  @media (min-width: 992px){
+    .multi-device{
+    margin-left: 450px!important;
+    width: 50%;
+    }
+
+    .logo-image {
+    margin-left: 550px; 
+      margin-top:50px
+    }
+  }
+
+
+</style>
+
+<link rel="stylesheet" href="{{asset('backend/dist/css/adminlte.min.css?v=3.2.0')}}">
+
+<body style="background-color: #f0f2f5;">
+<img src="{{asset('frontend/assets/img/logo-update.png')}}" class="logo-image" height="70px" width="130px" >
 
 
 
-              <div class="flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+<section class="content mobile-device" style=" width: 30%; margin-top: 30px;">
+<div class="container-fluid multi-device">
+<div class="row">
 
-                <button type="submit" class="bg-blue-500 text-white font-bold px-5 py-2 rounded focus:outline-none shadow hover:bg-blue-700 transition-colors m-auto">Log In</button>
-              </div>
-            </div>
-          </form>
-          <div class="flex justify-center text-gray-500 text-sm">
-            <p>Copyright <script>document.write(new Date().getFullYear());</script></p>
-          </div>
-        </div>
-    </div>
- 
-</x-guest-layout>
+<div class="col-md-12">
+
+<div class="card card-primary">
+<!-- <div class="card-header">
+<h3 class="card-title">Login <small>with email and password</small></h3>
+</div> -->
+
+
+<form method="POST" action="{{ route('admin.login') }}" novalidate="novalidate"  id="quickForm">
+ @csrf
+<div class="card-body">
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" name="email" class="form-control" id="exampleInputEmail1" value="{{ old('email') }}" placeholder="Enter email" required>
+@error('email')
+<span class="error">{{ $message }}</span>
+@enderror
+
+</div>
+
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+@error('password')
+<span class="error">{{ $message }}</span>
+@enderror
+
+</div>
+<div class="form-group mb-0">
+<div class="form-group">
+<button type="submit" class="btn" style="width:100%; background-color: #007bff; color: #fff;">Log In</button>
+</div>
+</div>
+</div>
+
+
+</form>
+</div>
+<div class="footer__copyright hide-on-desktop">©<script>document.write(new Date().getFullYear())</script> Tech Simians. All Rights Reserved</div>
+
+
+<div class="col-md-6">
+</div>
+
+</div>
+
+</div>
+</section>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</body>

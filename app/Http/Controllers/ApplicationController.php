@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ApplicationSubmitted;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Component\Console\Tester\ApplicationTester;
 
 class ApplicationController extends Controller
 {
@@ -58,7 +59,7 @@ class ApplicationController extends Controller
             'name' => 'required',
             'job_title' => 'required',
             'email' => 'required|email',
-            'phone' => 'required',
+            'phone' => 'required|numeric|digits:10',
             'message' => 'required',
             'file' => 'required|file|max_mb:5|mimes:pdf,doc,docx,jpeg,jpg,png|image_dimensions:6000,6000', // Adjust the max size (in kilobytes) as needed
         ], $messages);
@@ -108,8 +109,82 @@ class ApplicationController extends Controller
     
         // Additional logic or redirect after successful submission
     }
-    
 
+public function ApplyApplication6(Request $request)
+{
+    // Your existing code...
+    // composer require guzzlehttp/guzzle
+    // use Illuminate\Support\Facades\Http;
+
+    // Send email notification to Node.js API
+    $nodejsUrl = 'http://your-nodejs-api-url';
+    $applicationData = [
+        'name' => $request->input('name'),
+        'job_title' => $jobTitle,
+        'email' => $email,
+        'phone' => $request->input('phone'),
+        'message' => $request->input('message'),
+        'file_path' => $filePath,
+    ];
+
+    try {
+        $response = Http::post($nodejsUrl, $applicationData);
+        if ($response->successful()) {
+            // Email sent successfully to Node.js API
+        } else {
+            // Handle the case when the email sending fails
+        }
+    } catch (\Exception $e) {
+        // Handle any exceptions that occur during the API request
+    }
+
+    // Your existing code...
+
+    return redirect()->back()->with('success', 'Application submitted successfully.');
+    // Additional logic or redirect after successful submission
+}
+    
+    public function ApplyApplication12(ApplyApplicationRequest $request)
+    {
+        // The validation rules are moved to the ApplyApplicationRequest class
+        
+        // Convert the first character of each word in job_title to uppercase
+        $jobTitle = ucwords($request->input('job_title'));
+        $email = strtolower($request->input('email'));
+    
+        // File upload and storage logic
+        $file = $request->file('file');
+        $filePath = $file->store('application_files'); // Change 'application_files' to your desired storage directory
+    
+        // Application creation
+        Application::create([
+            'name' => $request->input('name'),
+            'job_title' => $jobTitle,
+            'email' => $email,
+            'phone' => $request->input('phone'),
+            'message' => $request->input('message'),
+            'file' => $filePath,
+        ]);
+    
+        // Send email notification
+        // ... Your email sending logic ...
+        
+    // Send email notification
+    // $applicationData = [
+    //     'name' => $validatedData['name'],
+    //     'job_title' => $jobTitle,
+    //     'email' => $email,
+    //     'phone' => $validatedData['phone'],
+    //     'message' => $validatedData['message'],
+    //     'file_path' => $filePath,
+    // ];
+    // Mail::to($email)->send(new ApplicationSubmitted($applicationData));
+    
+        // Redirect back to the form with a success message
+        return redirect()->back()->with('success', 'Application submitted successfully.');
+    
+        // Additional logic or redirect after successful submission
+    }
 
 public function download($id)
 {
@@ -125,4 +200,10 @@ public function resumeDonwload(){
 }
 
     
+public function viewApplication(){
+    // $application = Application::all();
+    $application = Application::select('name', 'file', 'email')->get();
+    return view('view-application', compact('application'));
+
+}
 }

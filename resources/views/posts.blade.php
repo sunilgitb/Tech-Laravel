@@ -7,11 +7,15 @@
             <h1 style="text-align:center">Blog</h1>
 
             <div class="row">
+                <h3>Blogs</h3>
                 @foreach ($posts as $post)
                     <div class="col-md-6">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h5>{{ $post->title }}</h5>
+                                <p>{{ $post->title }}</h6>x
+                                    <p>Author</p>
+                                    <img src="{{ asset('public/post/images/1700289555.png') }}" alt="Image description">
+
                                 <p>
                                     @if(strlen($post->description) > 50)
                                         <span class="read-more-content hide_content">{{ $post->description }}</span>

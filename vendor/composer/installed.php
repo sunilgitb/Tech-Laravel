@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd5bbdaa3bf1217ef7d3a62ec572b63f467c7cf25',
+        'reference' => 'f148e74c60ad521c6559f743612a5617b172c654',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -159,6 +159,24 @@
             'replaced' => array(
                 0 => '1.9.2',
             ),
+        ),
+        'giggsey/libphonenumber-for-php' => array(
+            'pretty_version' => '8.13.18',
+            'version' => '8.13.18.0',
+            'reference' => '23eb0cb4577ec59ed7a89decc332815896085d24',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/libphonenumber-for-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'giggsey/locale' => array(
+            'pretty_version' => '2.4',
+            'version' => '2.4.0.0',
+            'reference' => 'a6b33dfc9e8949b7e28133c4628b29cd9f1850bb',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/locale',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.1.1',
@@ -418,7 +436,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd5bbdaa3bf1217ef7d3a62ec572b63f467c7cf25',
+            'reference' => 'f148e74c60ad521c6559f743612a5617b172c654',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -751,8 +769,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(

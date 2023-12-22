@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{-- <title>@yield('title') Best Software & Website Developer in Mumbai | Tech simians</title>
+    <meta name="description" content="@yield('meta_description')"> --}}
+    <meta name="description" content="@yield('description', 'Excellence in Website & App Development, Digital Marketing Services. Your Trusted Ad Agency in Mumbai and Reliable Website Developer Partner.')">
+    <meta name="keywords" content="@yield('keywords', 'digital marketing consultant, ad agency in mumbai, website developer in mumbai ')">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="robots" content="index, follow" /> <!-- Control search engine indexing -->
+  
+  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +27,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" defer></script>
     <script src="{{asset('frontend/assets/js/accordian.js')}}" defer></script>
     <script src="{{asset('frontend/assets/js/index.js')}}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
-  
-    <title>Tech Simians</title>
+    <!-- <title>Tech Simians</title> -->
+   
   </head>

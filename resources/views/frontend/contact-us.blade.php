@@ -22,7 +22,7 @@
         <div class="contact__row">
         <form class="contact__form" action="{{ route('contact.submit') }}" method="POST">
     @csrf
-   
+
     <h1 class="contact__title">Let’s Talk, Let’s Connect!</h1>
     @if(session('success'))
     <div id="success-message" class="alert alert-success">
@@ -184,7 +184,7 @@
         </div>
       </section>
     </main>
-    
+
   </body>
 
   <style>

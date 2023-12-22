@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Privacy Policy - Tech Simians</title>
+
+     
 </head>
     <main class="container">
-    <br><br><br><br>
-   <h1> Privacy Policy for Techsimians</h1>
+
+   <h1 class="privacy" style="margin-top:155px"> Privacy Policy for Techsimians</h1>
 <p>At Techsimians, accessible from <a href="{{url('https://techsimians.com/')}}"><u style="color:blue;">https://techsimians.com/</u></a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Techsimians and how we use it.</p>
 
 <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at <u style="color: blue;"><a href="mailto:info@techsimians.com">info@techsimians.com</a></u>.</p>

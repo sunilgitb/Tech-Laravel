@@ -53,45 +53,170 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="{{ route('admin.posts.store') }}" enctype="multipart/form-data">
+              {{-- <form method="POST" action="{{ route('admin.posts.store') }}" enctype="multipart/form-data"> --}}
+              <form method="POST" action="{{ route('admin.blog-posts') }}" enctype="multipart/form-data">
                   @csrf
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Title</label>
-                    <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Enter Title">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Description</label>
-                    <textarea name="description" class="form-control" id="exampleInputPassword1" placeholder="Enter Description"> </textarea>
-                  </div>
-                          <div class="form-group">
+               <div class="card-body">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Title</label>
+              <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ old('slug') }}" placeholder="Enter Title">
+
+              @if ($errors->has('slug'))
+              <span class="invalid-feedback">{{ $errors->first('slug') }}</span>
+          @endif
+            </div>
+            <div class="form-group">
+              <label for="exampleInputMetaTitle">Meta Title</label>
+              <input type="text" name="meta_title" class="form-control" id="exampleInputMetaTitle" placeholder="Enter Meta Title max 150 characters from main title">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputMetaTitle">Meta Description</label>
+              <textarea name="meta_description" class="form-control" id="exampleInputMetaDescription" placeholder="Enter max 500 characters from starting description"></textarea>
+            </div>
+            <div class="form-group">
+              {{-- <form name="myform">
+              <label for="exampleInputMetaDescription">Meta Description</label>
+              <textarea name="limitedtextarea" class="form-control"  onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,200);" 
+              onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,200); "  placeholder="Enter max 500 characters from starting description">
+              </textarea><br>
+              <font size="1">(Maximum characters: 200)<br>
+              You have <input readonly type="text" name="countdown" size="6" value="200" > characters left.</font>
+              </form>
+            </div> --}}
+            <div class="form-group">
+              <label for="exampleInputMetaKeywords">Meta Keywords</label>
+              <input type="text" name="meta_keywords" class="form-control" id="exampleInputMetaKeywords" placeholder="Enter Meta Keywords like: SEO, IT, BLOGS">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputMetaKeywords">Category</label>
+              <select name="cat_id" id="cat" class="form-control" required> 
+                <option value="">--Select Category--</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->cat_name }}</option>
+                @endforeach
+            </select>
+            </div>
+
+            
+            {{-- <div class="form-group">
+              <label for="exampleInputMetaKeywords">Tag</label>
+              <select name="tag" id="cat" class="form-control" required> 
+                <option value="">--Select Tag--</option>
+                @foreach ($tags as $tag)
+                    <option value="{{ $tag->id }}">{{ $tag->tag_name }}</option>
+                @endforeach
+            </select>
+            </div>
+          </div>
+                     --}}
+               
+                  {{-- <div class="form-group">
+                   <label for="exampleInputPassword1">Description</label>
+                    <!-- 
+                    <textarea name="description" class="form-control" id="exampleInputPassword1" placeholder="Enter Description"> </textarea> -->
+                  </div> --}}
+                           <div class="form-group" >
             <label for="exampleInputFile">Upload File</label>
             <div class="input-group">
                 <div class="custom-file">
                     <input type="file" name="image" class="custom-file-input" id="exampleInputFile" onchange="previewImage(event)">
                     <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                </div>
-                <div class="input-group-append">
                     <span class="input-group-text">Upload</span>
                 </div>
+                {{-- <div class="input-group-append">
+                  
+                </div> --}}
             </div>
         </div>
-        <div class="preview-container">
-            <img id="preview" src="#" alt="Preview" style="display: none; max-width: 200px; max-height: 200px;">
-        </div>
 
-                 
+
+        <div class="preview-container">
+            <img id="preview" src="#" alt="Preview" style="display: none; max-width: 200px; max-height: 500px!important;">
+        </div> 
+
+
+
+  
+   {{-- <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script> --}}
+
+  
+    <textarea name="description" id="editor" sytle="height: 350px;">
+       
+    </textarea>
+    {{-- <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>  --}}
+    {{-- <div class="form-group">
+      <label for="description" class="col-form-label">Description</label>
+      <textarea class="form-control" id="description" name="description">{{old('description')}}</textarea>
+      @error('description')
+      <span class="text-danger">{{$message}}</span>
+      @enderror
+    </div> --}}
+
+
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script> --}}
+{{-- 
+<div class="editor-container" style="margin-left:22px!important;">
+    <textarea  name="description" id="editor" rows="11" cols="50"></textarea>
+</div> --}}
+
+
+
+
+<div class="card-footer">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+<style>
+  /* .editor-container {
+    height: 416px; /* Adjust the height as needed */
+    overflow: hidden;
+    border: 1px solid #ccc; Optional styling
+    padding: 10px; /* Optional styling */
+} */
+#editor {
+    resize: vertical;
+    min-height: 200px!important; /* Adjust the minimum height as needed */
+}
+
+
+</style>
+</body>
+</html>
                 </div>
                 <!-- /.card-body -->
 
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
+              
             </div>
 
             
 @endsection
+
+
+<script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
+
+    
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+  </script>
 <script>
     function previewImage(event) {
         var input = event.target;
@@ -124,3 +249,16 @@
         }
     });
 </script>
+
+<script language="javascript" type="text/javascript">
+  function limitText(limitField, limitCount, limitNum) {
+    if (limitField.value.length > limitNum) {
+      limitField.value = limitField.value.substring(0, limitNum);
+    } else {
+      limitCount.value = limitNum - limitField.value.length;
+    }
+  }
+  </script>
+
+
+

@@ -76,8 +76,8 @@ Starter Pages
 </li>
 </li>
 <li class="nav-item">
-<!-- <a href="{{url('products-list')}}" class="nav-link"> -->
-@canany('Contact access','Contact add','Contact edit','Contact delete')
+
+<!-- @canany('Contact access','Contact add','Contact edit','Contact delete')
                 <a class="nav-link" {{ Route::currentRouteNamed('admin.contacts.index') ? 'active' : '' }}"
                     href="{{ route('admin.contacts.index')}}">
 <i class="far fa-circle nav-icon"></i>
@@ -85,8 +85,8 @@ Starter Pages
 </a>
 @endcanany
 </li>
-<li class="nav-item">
-<!-- <a href="{{url('products-list')}}" class="nav-link"> -->
+<li class="nav-item"> -->
+
 @canany('Application access','Application add','Application edit','Application delete')
                 <a class="nav-link" {{ Route::currentRouteNamed('admin.contacts.index') ? 'active' : '' }}"
                     href="{{ route('admin.applications.index')}}">
@@ -101,7 +101,39 @@ Starter Pages
                  <a class="nav-link {{ Route::currentRouteNamed('admin.posts.index') ? 'active' : '' }}"
                     href="{{ route('admin.posts.index')}}">
 <i class="far fa-circle nav-icon"></i>
-<p>Post</p>
+<p>Posts</p>
+</a>
+@endcanany
+</li>
+<li class="nav-item">
+<!-- <a href="{{url('add-product')}}" class="nav-link "> -->
+@canany('Category access','Category add','Category edit','Category delete')
+                 <a class="nav-link {{ Route::currentRouteNamed('admin.categories.index') ? 'active' : '' }}"
+                    href="{{ route('admin.categories.index')}}">
+<i class="far fa-circle nav-icon"></i>
+<p>Categories</p>
+</a>
+@endcanany
+</li>
+</li>
+<li class="nav-item">
+<!-- <a href="{{url('add-product')}}" class="nav-link "> -->
+@canany('Comment access','Comment add','Comment edit','Comment delete')
+                 <a class="nav-link {{ Route::currentRouteNamed('admin.categories.index') ? 'active' : '' }}"
+                    href="{{ route('admin.categories.index')}}">
+<i class="far fa-circle nav-icon"></i>
+<p>Comments</p>
+</a>
+@endcanany
+</li>
+</li>
+<li class="nav-item">
+<!-- <a href="{{url('add-product')}}" class="nav-link "> -->
+@canany('Tag access','Tag create','Tag edit','Tag delete')
+                 <a class="nav-link {{ Route::currentRouteNamed('admin.tags.index') ? 'active' : '' }}"
+                    href="{{ route('admin.tags.index')}}">
+<i class="far fa-circle nav-icon"></i>
+<p>Tags</p>
 </a>
 @endcanany
 </li>

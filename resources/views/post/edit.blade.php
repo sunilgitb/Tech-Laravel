@@ -4,7 +4,7 @@
         <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
             <div class="container mx-auto px-6 py-1 pb-16">
               <div class="bg-white shadow-md rounded my-6 p-5">
-                <form method="POST" action="{{ route('admin.posts.update',$post->id)}}">
+                <form method="POST" action="{{ route('admin.blog-posts-update',$post->id)}}">
                   @csrf
                   @method('put')
                   <div class="flex flex-col space-y-2">
@@ -51,7 +51,8 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="{{ route('admin.posts.update',$post->id)}}">
+              <form method="POST" action="{{ route('admin.blog-posts-update',$post->id)}}">
+              {{-- <form method="POST" action="{{ route('admin.posts.update',$post->id)}}"> --}}
                   @csrf
                   @method('put')
                 <div class="card-body">
@@ -60,21 +61,56 @@
                     <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Enter Title" value="{{ old('title',$post->title) }}">
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputEmail1">Meta Title</label>
+                    <input type="text" name="meta_title" class="form-control" id="exampleInputEmail1" placeholder="Enter Meta Title" value="{{ old('meta_title',$post->meta_title) }}">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Meta Description</label>
+                      <textarea name="meta_description" class="form-control" id="exampleInputPassword1" placeholder="Enter Meta Description"  rows="5">{{ old('meta_description',$post->meta_description) }}</textarea>
+                    </div>
+                    <label for="exampleInputEmail1">Meta Keywords</label>
+                    <input type="text" name="meta_keywords" class="form-control" id="exampleInputEmail1" placeholder="Enter Meta Keywords" value="{{ old('meta_keywords',$post->meta_keywords) }}">
+                  </div>
+
+              <div class="form-group">
+                <label for="exampleInputMetaKeywords">Category</label>
+                {{-- <select name="cat_name" id="cat" class="form-control" required>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" @if($post && $category->id == $post->cat_id) selected @endif>{{ $category->cat_name }}</option>
+                    @endforeach
+                </select> --}}
+                <label for="exampleInputMetaKeywords">Category</label>
+                <select name="cat_id" id="cat" class="form-control" required> 
+                  @foreach ($categories as $category)
+                      <option value="{{ $category->id }}">{{ $category->cat_name }}</option>
+                  @endforeach
+              </select>
+  
+{{-- 
+              <div class="form-group">
+    <label for="exampleInputMetaKeywords">Tag</label>
+    <select name="tag_name" id="cat" class="form-control" required>
+        @foreach ($tags as $tag)
+            <option value="{{ $tag->id }}" @if($tag->id == $post->tag_id) selected @endif>{{ $tag->tag_name }}</option>
+        @endforeach
+    </select>
+</div> --}}
+   
+  
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Description</label>
                     <textarea name="description" class="form-control" id="exampleInputPassword1" placeholder="Enter Description"  rows="5">{{ old('description',$post->description) }}</textarea>
                   </div>
                           <div class="form-group">
+
             <label for="exampleInputFile">Upload File</label>
             <div class="input-group">
                 <div class="custom-file">
-                    <input type="file" name="image" class="custom-file-input" id="exampleInputFile" onchange="previewImage(event)" value="{{ old('image',$post->image) }}">
+                    <input type="file" name="image" class="custom-file-input" id="exampleInputFile" onchange="previewImage(event)">
                     <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                </div>
-                <div class="input-group-append">
                     <span class="input-group-text">Upload</span>
                 </div>
-            </div>
-        </div>
         <div class="preview-container">
             <img id="preview" src="#" alt="Preview" style="display: none; max-width: 200px; max-height: 200px;">
         </div>
@@ -122,4 +158,22 @@
             }, 3000);
         }
     });
+</script>
+
+
+<script>
+  function previewImage(event) {
+      var input = event.target;
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              var previewElement = document.getElementById('preview');
+              previewElement.src = e.target.result;
+              previewElement.style.display = 'block';
+          }
+
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
 </script>

@@ -15,40 +15,47 @@
       <div class="workgrid" style="margin-top: 80px;">
         <h1 class="heading">Our Work</h1>
         <div class="subheading">
-          We create products only on the basis of user experience and only
-          covering the needs of the user.
+          Our product development is entirely driven by user experience, ensuring that we address only the user's essential requirements.
         </div>
         <div class="workgrid__row">
           <a href="{{url('our-work-detail')}}" class="workgrid__item">
             <div class="workgrid__img">
-              <img src="{{asset('frontend/assets/img/our-work_1.png')}}" alt="" />
+              <img src="{{asset('frontend/assets/img/work-2-1.png')}}" alt="" />
             </div>
-            <div class="workgrid__item-title">Air Book</div>
-            <div class="workgrid__item-text">Private Jet booking platform</div>
+            <div class="workgrid__item-title">Document Management Systems</div>
+            <div class="workgrid__item-text">It is all about Document Management Systems</div>
             <div class="workgrid__item-cta">See More</div>
           </a>
-          <a href="{{url('our-work-detail')}}" class="workgrid__item">
+          <a href="{{url('our-work-detail-2')}}" class="workgrid__item">
             <div class="workgrid__img">
-              <img src="{{('frontend/assets/img/our-work_3.png')}}" alt="" />
+              <img src="{{('frontend/assets/img/work-3-1.png')}}" alt="" />
             </div>
-            <div class="workgrid__item-title">Trader X</div>
-            <div class="workgrid__item-text">A first polygon 3d website</div>
+            <div class="workgrid__item-title">TripDarwin</div>
+            <div class="workgrid__item-text">Tripdarwin is a comprehensive platform designed to cater to all your travel needs.</div>
             <div class="workgrid__item-cta">See More</div>
           </a>
-          <a href="{{url('our-work-detail')}}" class="workgrid__item">
+          <a href="{{url('our-work-detail-3')}}" class="workgrid__item">
             <div class="workgrid__img">
-              <img src="{{asset('frontend/assets/img/our-work_2.png')}}" alt="" />
+              <img src="{{asset('frontend/assets/img/work-6.png')}}" alt="" />
             </div>
-            <div class="workgrid__item-title">Project WE</div>
-            <div class="workgrid__item-text">Get social</div>
+            <div class="workgrid__item-title">Cash Management System</div>
+            <div class="workgrid__item-text">Cash Management Systems is a robust and secure solution</div>
             <div class="workgrid__item-cta">See More</div>
           </a>
-          <a href="{{url('our-work-detail')}}" class="workgrid__item">
+          <a href="{{url('our-work-detail-4')}}" class="workgrid__item">
             <div class="workgrid__img">
-              <img src="{{asset('frontend/assets/img/our-work_2.png')}}" alt="" />
+              <img src="{{asset('frontend/assets/img/work-8-1.png')}}" alt="" />
             </div>
-            <div class="workgrid__item-title">Project WE</div>
-            <div class="workgrid__item-text">Get social</div>
+            <div class="workgrid__item-title">Student Scoop</div>
+            <div class="workgrid__item-text">The Student Scoop is an educational institution</div>
+            <div class="workgrid__item-cta">See More</div>
+          </a>
+          <a href="{{url('our-work-detail-5')}}" class="workgrid__item">
+            <div class="workgrid__img">
+              <img src="{{asset('frontend/assets/img/work-9-1.png')}}" alt="" />
+            </div>
+            <div class="workgrid__item-title">Human Resources Management</div>
+            <div class="workgrid__item-text">Human Resources Management System (HRMS) is a versatile software solution</div>
             <div class="workgrid__item-cta">See More</div>
           </a>
         </div>

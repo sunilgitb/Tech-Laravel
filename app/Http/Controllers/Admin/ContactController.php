@@ -23,7 +23,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts= Contact::paginate(4);
+        $contacts= Contact::paginate(10);
 
         return view('contact.index',['contacts'=>$contacts]);
     }

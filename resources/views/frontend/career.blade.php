@@ -71,7 +71,7 @@ body, html {
     }
 
     /* Large screen PC-specific styles using media query */
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
       /* Target devices with a screen width of 1200px or larger (large screen PCs) */
       margin-top: 70px; /* Apply margin-top of -10px for large screen PCs */
     }
@@ -96,8 +96,9 @@ body, html {
       <div id="success-message" class="alert alert-success" style="float:right;">
         {{ session('success') }}
       </div>
+     
       @endif
-        <div class="opening__title" style="text-align:center; margin-top:50px;">Job Openings</div>
+        {{-- <div class="opening__title" style="text-align:center; margin-top:50px">Job Openings</div>
         <!-- <a class="opening__item" href="{{url('job-openings')}}">
           <div class="opening__item-title">Visual Designer Intern</div>
           <div class="opening__item-content">
@@ -105,32 +106,32 @@ body, html {
           </div> -->
         </a>
       </section>
-    
+      
       <section class="jobs-list-tags js-filter" style="margin-top:-80px">
     <div class="container">
       <div class="job-tags-toggle js-filter-group">
         <label class="job-tag-toggle">
           <input checked class="job-tag-toggle__input" name="job-tag-toggle" type="radio" value="[data-filter]">
-          <div class="job-tag-toggle__content"  style="margin-top:50px;">
-            <img class="job-tag-toggle__ico" src="{{asset('frontend/assets/img/tag-icon.svg')}}"> All Teams
+          <div class="job-tag-toggle__content all-teams">
+           All Teamss
           </div>
         </label>
         
         <label class="job-tag-toggle">
-          <input class="" name="job-tag-toggle" type="radio" value="[data-filter~=support]">
+          <input class="job-title-input" name="job-tag-toggle" type="radio" value="[data-filter~=support]">
           <div class="job-title job-tag-toggle__content" data-job-id="engineering" job-tag-toggle__content">
           <div class="job-tag-toggle__dot--engineering job-tag-toggle"></div>Quality Analyst
         </div>
         
       </label>
       <label class="job-tag-toggle">
-        <input class="" name="job-tag-toggle" type="radio" value="[data-filter~=product]">
+        <input class="job-title-input" name="job-tag-toggle" type="radio" value="[data-filter~=product]">
         <div class="job-title job-tag-toggle__content" data-job-id="product">
           <div class="job-tag-toggle__dot--product job-tag-toggle"></div> Product
         </div>
       </label>
       <label class="job-tag-toggle">
-        <input class="" name="job-tag-toggle" type="radio" value="[data-filter~=support]">
+        <input class="job-title-input" name="job-tag-toggle" type="radio" value="[data-filter~=support]">
         <div class="job-title job-tag-toggle__content" data-job-id="support">
           <div class="job-tag-toggle__dot--support"></div> Support
         </div>
@@ -142,46 +143,12 @@ body, html {
   
   
 </body>
-</html>
+</html> --}}
 
-<style>
-  .card-animation {
-    animation: cardFadeIn 0.7s ease-in-out forwards;
-    opacity: 0;
-  }
-  
-  @keyframes cardFadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    </style>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</style>
-<script>
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-  <script>
-    $(document).ready(function() {
-      $('.card').addClass('card-animation');
-    });
-    </script>
-  </script>
-  <style>
-    .card  {
-      background-color: #f3f6fc;
-    }
-  </style>
+
   <!-- Example job content sections -->
- <div class="container">
- <section id="engineering" class="job-content" style="background-color:#f3f6fc;">
+ <!-- <div class="container"> -->
+ {{-- <section id="engineering" class="job-content" style="background-color:#f3f6fc;margin-top: 31px;">
     <div class="card card-animation">
       <div class="card-body">
         <!-- <h3 class="card-title">PositionQuality </h3> -->
@@ -235,13 +202,11 @@ body, html {
   </button>
 </div>
 </div>
-</section>
- </div>
+</section> --}}
 
 
-</section>
-<div class="container">
-<section id="product" class="job-content">
+
+{{-- <section id="product" class="job-content"  style="margin-top: 31px;">
   <div class="card card-animation">
     <div class="card-body">
       <h3 class="card-title">Product</h3>
@@ -250,7 +215,7 @@ body, html {
       <p class="card-text">We are seeking a highly organized and experienced Human Resources Specialist to join our team. As a Human Resources Specialist, you will be responsible for managing various HR functions, including recruitment, employee onboarding and offboarding, benefits administration, performance management, employee relations, and compliance with employment laws and regulations. Your role will be critical in maintaining a positive work environment and supporting the company's overall strategic objectives.</p>
       <p class="card-text">Location: Andheri East</p>
       <p class="card-text">Job Type: Full-Time</p>
-      <h4 class="card-subtitle">Responsibilities:</h4>
+      <h4 class="card-subtitle">Responsibilities:</h4><br>
       <h5 class="card-subtitle">Recruitment and Selection:</h5>
       <p class="card-text">Collaborate with hiring managers to identify staffing needs and develop job descriptions.</p>
       <p class="card-text">Source, screen, and interview candidates using various recruitment methods.</p>
@@ -270,8 +235,8 @@ body, html {
           </div>
         </div>
       </section>
-    <br><br>
-    <section id="support" class="job-content">
+  
+    <section id="support" class="job-content" style="margin-top: 31px;">
       <div class="card card-animation">
         <div class="card-body">
           <h3 class="card-title">Support</h3>
@@ -281,165 +246,99 @@ body, html {
           </button>
         </div>
       </div>
-    </section>
-  </div>
-<script>
-  // JavaScript code for job filtering
-document.addEventListener("DOMContentLoaded", function () {
-  const filterRadioInputs = document.querySelectorAll(".job-tag-toggle__input");
-  const jobContentSections = document.querySelectorAll(".job-content");
+    </section> --}}
 
-  function showAllJobDescriptions() {
-    jobContentSections.forEach((section) => {
-      section.style.display = "block";
-    });
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float three columns side by side */
+.column {
+  float: left;
+  width: 12%;
+  padding: 10px 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
   }
+}
 
-  function hideAllJobDescriptions() {
-    jobContentSections.forEach((section) => {
-      section.style.display = "none";
-    });
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-
-  function showJobDescription(jobId) {
-    jobContentSections.forEach((section) => {
-      if (section.id === jobId) {
-        section.style.display = "block";
-      } else {
-        section.style.display = "none";
-      }
-    });
-  }
-
-  // Handle filter radio button clicks
-  filterRadioInputs.forEach((input) => {
-    input.addEventListener("change", function () {
-      const value = this.value;
-
-      if (value === "[data-filter]") {
-        showAllJobDescriptions();
-      } else {
-        hideAllJobDescriptions();
-        showJobDescription(value);
-      }
-    });
-  });
-
-  // Show all job descriptions by default
-  showAllJobDescriptions();
-});
-
-</script>
+}
 
 
+/* Style the counter cards */
+.card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  /* box-shadow: 6px 6px 25px 10px #0a0af57a; */
+
+  padding: 12px;
+  text-align: center;
+  background-color: #f1f1f1;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 30px 0 rgba(0,0,0,0.4);
+}
+
+/* img {
+  border-radius: 10px 10px 10px 10px;
+} */
+</style>
+    <!-- <div class="row">
+<a href="#" target="_blank">
+<div class="column">
+<div class="card">
+<img src="https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/space-wallpapers-1920x1200.jpg" style="width:100%">
+<h2>Title</h2>
+  <p>Text</p>
+</div>
+</div>
+</div> -->
+
+<div class="opening__title" style="text-align:center; margin-top:50px">Job Openings</div>
+
+      <p class="opening__title"  style="text-align:center; margin-top:50px">Kindly mail us at: hr@techsimians.com</p>
     <title>Benefits and Perks</title>
-    <style>
-      /* Reset default styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.5;
-        color: #333;
-        background-color: #f5f5f5;
-      }
-      
-      /* Wrapper */
-      .wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
     
-    /* List Box */
-    .list-box {
-      background-color: #fff;
-      border-radius: 6px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-    
-    /* Inner Content */
-    .list-box__inner {
-      padding: 40px 20px;
-    }
-    
-    /* Title */
-    .list-box__title {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    
-    /* Subtitle */
-    .list-box__subtitle {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #666;
-    }
-    
-    /* Download Link */
-    .download-link {
-      display: inline-block;
-      margin-top: 20px;
-      color: #f8646a;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    
-    /* Separator Line */
-    .list-box__separator {
-      height: 1px;
-      background-color: #eee;
-      margin: 40px 0;
-    }
-    
-    /* Column Layout */
-    .list-box__content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .column {
-      flex-basis: calc(50% - 10px);
-      margin-bottom: 20px;
-    }
-    
-    /* List Items */
-    .list-box__list {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .list-box__item {
-      margin-bottom: 20px;
-    }
-    
-    .list-box__item-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .list-box__item-text {
-      font-size: 16px;
-      color: #666;
-    }
-    </style>
 </head>
 <body>
   
   <br><br>
-  <section class="list-box list-box--careers" style="margin-top:-55">
+  <section class="list-box list-box--careers">
     <div class="wrapper">
       <div class="list-box__inner">
-        <h2 class="list-box__title">
-          <span style="color:#007bff">Benefits</span> <br> and Perks
+        <h2 class="list-box__title" style="color:#007bff;">
+          Benefits <br> and Perks
         </h2>
         <div class="list-box__subtitle">Our team is jam packed with creative, smart and bubbly people. We inspire each other to improve daily, and be the best and happiest we can be.</div>
         <!-- <a class="enlarged-link download-link" href="/downloads/
@@ -575,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
       /* Links Section */
       .links {
         padding: 40px 0;
-        background-color: #f9f9f9;
+        /* background-color: #fff; */
       }
       
       .links-box {
@@ -604,6 +503,12 @@ document.addEventListener("DOMContentLoaded", function () {
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
+
+    @media (max-width: 768px) {
+      .links-box__item{
+        margin-top:10px;
+      }
+    }
     
     .links-box__item:hover {
       transform: translateY(-5px);
@@ -626,6 +531,8 @@ document.addEventListener("DOMContentLoaded", function () {
       object-fit: cover;
     }
     
+    
+    }
     .links-box__content {
       padding: 20px;
       text-align: center;
@@ -640,6 +547,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .links-box__subtitle {
       font-size: 16px;
       color: #666;
+      text-align: left;
     }
     </style>
 </head>
@@ -654,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .links-box__item {
-      flex: 0 0 50%;
+      flex: 0 0 49%;
       padding: 10px; /* Add padding to offset the negative margin */
     }
 
@@ -666,9 +574,60 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   </style>
 
+<style>
+  .links-box__item:hover {
+    text-decoration: none; /* Remove the underline */
+  }
 
+  @media (min-width: 992px) {
+    .no-desktop {
+      display: none;
+    }
+  }
 
+  @media (max-width: 768px) {
+    .no-mobile {
+      display:none;
+    }
+  }
+</style>
+  <div class="container no-desktop">
   <section class="links">
+    <div class="links-box">
+      <div class="links-box__wrap">
+        <a class="links-box__item links-box__item_services" href="{{url('about-us')}}">
+          <div class="links-box__bg">
+            <picture>
+              <source srcset="{{asset('frontend/assets/img/about.jpg')}}" type="image/webp">
+              <source srcset="{{asset('frontend/assets/img/about.jpg')}}" type="image/jpg">
+              <img alt="" class="links-box__img" src="{{asset('frontend/assets/img/about.jpg')}}">
+            </picture>
+          </div>
+          <div class="links-box__content">
+            <h3 class="links-box__title">About Us</h3>
+            <div class="links-box__subtitle">Our team is jam packed with creative, smart and bubbly people. We inspire each other to improve daily, and be the best and happiest we can be.</div>
+          </div>
+        </a>
+        <a class="links-box__item links-box__item_team" href="{{url('about-us')}}">
+          <div class="links-box__bg">
+            <picture>
+              <source srcset="{{asset('frontend/assets/img/team-tech.png')}}" type="image/webp">
+              <source srcset="{{asset('frontend/assets/img/team-tech.png')}}" type="image/jpg">
+              <img alt="" class="links-box__img" src="{{asset('frontend/assets/img/team-tech.png')}}" width=100%;>
+            </picture>
+          </div>
+          <div class="links-box__content">
+            <h3 class="links-box__title">Team</h3>
+            <div class="links-box__subtitle">We have a team of professionals and experts that ensure every project is in sync with the client requirements in terms of timeliness, quality, consistency and flexibility. With its pool of quality and skilled resources.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+  <section class="links no-mobile">
     <div class="links-box">
       <div class="links-box__wrap">
         <a class="links-box__item links-box__item_services" href="{{url('about-us')}}">
@@ -702,9 +661,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </section>
 
 
-  <!-- Include Bootstrap JS (optional) -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- -->
+
 
 
 
@@ -781,6 +738,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <span class="text-danger">{{ $message }}</span>
             @enderror
           </div>
+        
           <div class="form-group">
             <label for="message">Message</label>
             <textarea class="form-control" name="message" id="message" rows="2" cols="2" placeholder="Enter your message" required>{{ old('message') }}</textarea>
@@ -788,118 +746,39 @@ document.addEventListener("DOMContentLoaded", function () {
             <span class="text-danger">{{ $message }}</span>
             @enderror
           </div>
-          <button type="submit" class="btn btn-primary" style="background-color: #0047ff;">Submit</button>
+          <button type="submit" class="btn btn-primary submit" style="background-color: #0047ff;    ">Submit</button>
         </form>
       </div>
       
     </div>
   </div>
 </div>
-<script>
-  const fileInput = document.getElementById('file');
-  const fileNameDisplay = document.getElementById('file-name');
-  
-  fileInput.addEventListener('change', function() {
-    if (fileInput.files.length > 0) {
-      const fileName = fileInput.files[0].name;
-      fileNameDisplay.textContent = fileName;
-    } else {
-      fileNameDisplay.textContent = "No file selected";
-    }
-  });
-</script>
 
-<script>
-  // Get the file input element
-  const fileInput = document.getElementById('file');
-  
-  // Add an event listener to the file input to show the message
-  fileInput.addEventListener('change', function () {
-    const file = fileInput.files[0];
-    
-    // Check if a file is selected
-    if (file) {
-      const fileSizeInMB = file.size / (1024 * 1024);
-      const maxWidth = 1000;
-      const maxHeight = 1000;
-      
-      // Display the message with file size and dimensions restrictions
-      alert(`Selected file: ${file.name}\nSize: ${fileSizeInMB.toFixed(2)} MB\nDimensions: ${maxWidth}x${maxHeight}`);
-    }
-  });
-</script>
 </body>
 </html>
 
 
-
-
 <script>
-  // Get all job title elements
-  const jobTitles = document.querySelectorAll('.job-title');
-  
-  // Add event listener to each job title
-  jobTitles.forEach((title) => {
-    title.addEventListener('click', showSelectedJob);
-  });
-  
-  function showSelectedJob(event) {
-    // Hide all job content sections
-      const jobContents = document.querySelectorAll('.job-content');
-      jobContents.forEach((content) => {
-        content.style.display = 'none';
-      });
-      
-      // Show the selected job content
-      const selectedJobId = event.target.getAttribute('data-job-id');
-      const selectedJobContent = document.getElementById(selectedJobId);
-      selectedJobContent.style.display = 'block';
+  // $("#exampleModal").modal("show");
+$('#exampleModal').on('hidden.bs.modal', function () {
+    $('#exampleModal form')[0].reset();
+    });
+</script>
+
+<style>
+  @media (max-width: 768px){
+    .submit {
+      margin-left: 138px;
     }
-    </script>
-
-
-
-<script>
-  // Get the job description element
-  var jobDescription = document.querySelector('.job-description .description-content');
-  
-  // Get the radio inputs for job tags
-  var jobTagInputs = document.querySelectorAll('.job-tag-toggle__input');
-  
-  // Add event listeners to the job tag inputs
-  jobTagInputs.forEach(function(input) {
-    input.addEventListener('click', function() {
-      var selectedValue = this.value;
-      
-      if (selectedValue === '[data-filter~=engineering]') {
-        jobDescription.textContent = 'Engineering job description goes here.5';
-      } else {
-        jobDescription.textContent = ''; // Clear the job description if a different job tag is selected
-      }
-    });
-  });
-  
-  // Get all job title elements
-  const jobTitles = document.querySelectorAll('.job-title');
-  
-  // Add event listener to each job title
-  jobTitles.forEach((title) => {
-    title.addEventListener('click', showSelectedJob);
-  });
-  
-  function showSelectedJob(event) {
-    // Hide all job content sections
-    const jobContents = document.querySelectorAll('.job-content');
-    jobContents.forEach((content) => {
-      content.style.display = 'none';
-    });
     
-    // Show the selected job content
-    const selectedJobId = event.target.getAttribute('data-job-id');
-    const selectedJobContent = document.getElementById(selectedJobId);
-    selectedJobContent.style.display = 'block';
   }
-  </script> 
+
+  @media (min-width: 992px){
+   .submit {
+    margin-left: 173px!important;
+   }
+  }
+</style>
 
 
 
@@ -924,7 +803,7 @@ document.addEventListener("DOMContentLoaded", function () {
   .job-tag-toggle__content {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 8px;
     border-radius: 20px;
     background-color: #f0f0f0;
     transition: background-color 0.3s ease;
@@ -937,7 +816,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 .job-tag-toggle__ico {
   width: 16px;
-  height: 16px;
+  /* height: 16px; */
   margin-right: 8px;
 }
 
@@ -1029,6 +908,10 @@ document.addEventListener("DOMContentLoaded", function () {
   margin-bottom: 10px;
 }
 
+.job-title-input {
+  display: none;
+}
+
 .job-tags {
   font-style: italic;
   color: #777;
@@ -1043,6 +926,10 @@ document.addEventListener("DOMContentLoaded", function () {
   padding-left: 20px;
 }
 
+.all-teams {
+  margin-top: 10px;
+}
+
 </style>
 
 <!-- <style>
@@ -1052,5 +939,138 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   </style> -->
 
+  <style>
+  .card-animation {
+    animation: cardFadeIn 0.7s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes cardFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    </style>
+ 
 
+  <style>
+    .card  {
+      background-color: #f3f6fc;
+      text-align: left;
+      margin: 5px;
+    }
+    @media (min-width: 992px) {
+      .card  {
+      background-color: #f3f6fc;
+      text-align: left;
+      margin: 25px;
+    }
+    }
+  </style>
+
+<style>
+      /* Reset default styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+        background-color: #f5f5f5;
+      }
+      
+      /* Wrapper */
+      .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* List Box */
+    .list-box {
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    /* Inner Content */
+    .list-box__inner {
+      padding: 40px 20px;
+    }
+    
+    /* Title */
+    .list-box__title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-left: -18px;
+    }
+    
+    /* Subtitle */
+    .list-box__subtitle {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #666;
+      margin-left: -18px;
+    }
+    
+    /* Download Link */
+    .download-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #f8646a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    /* Separator Line */
+    .list-box__separator {
+      height: 1px;
+      background-color: #eee;
+      margin: 40px 0;
+    }
+    
+    /* Column Layout */
+    .list-box__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .column {
+      flex-basis: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+    
+    /* List Items */
+    .list-box__list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .list-box__item {
+      margin-bottom: 20px;
+    }
+    
+    .list-box__item-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .list-box__item-text {
+      font-size: 16px;
+      color: #666;
+    }
+    </style>
 @include('frontend.layouts.footer')

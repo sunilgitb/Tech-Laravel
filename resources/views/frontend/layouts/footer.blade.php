@@ -1,7 +1,7 @@
 <footer class="footer">
       <div class="footer__row">
         <div class="footer__company">
-          <a href="/" class="footer__logo"><img src="{{asset('frontend/assets/img/new-logo.png')}}" alt=""></a>
+          <a href="/" class="footer__logo"><img src="{{asset('frontend/assets/img/logo-update.png')}}" height="40px" width="90px" alt="Tech Simians" /></a>
           <div class="footer__social">
             <a href="{{url('https://www.facebook.com/profile.php?id=100067748465412')}}" target="_blank" class="footer__social-icon"><img src="{{asset('frontend/assets/img/facebook.svg')}}" alt="Facebook"></a>
             <!-- <a href="#" target="_blank" class="footer__social-icon"><img src="{{asset('frontend/assets/img/youtube.svg')}}" alt="Youtube"></a> -->
@@ -29,6 +29,7 @@
             <div class="footer__accordian-title">Know Us</div>
             <div class="footer__accordian-content">
               <ul class="footer__menu">
+                <li class="footer__menu-item"><a href="https://yourvault.in/">Our Product</a></li>
                 <li class="footer__menu-item"><a href="{{url('about-us')}}">About Us</a></li>
                 <li class="footer__menu-item"><a href="{{url('our-work')}}">Work</a></li>
                 <li class="footer__menu-item"><a href="{{url('careers')}}">Career</a></li>
@@ -85,3 +86,163 @@
         }
     });
 </script>
+
+
+  <script>
+  const fileInput = document.getElementById('file');
+  const fileNameDisplay = document.getElementById('file-name');
+  
+  fileInput.addEventListener('change', function() {
+    if (fileInput.files.length > 0) {
+      const fileName = fileInput.files[0].name;
+      fileNameDisplay.textContent = fileName;
+    } else {
+      fileNameDisplay.textContent = "No file selected";
+    }
+  });
+</script>
+
+<script>
+  // Get the file input element
+  const fileInput = document.getElementById('file');
+  
+  // Add an event listener to the file input to show the message
+  fileInput.addEventListener('change', function () {
+    const file = fileInput.files[0];
+    
+    // Check if a file is selected
+    if (file) {
+      const fileSizeInMB = file.size / (1024 * 1024);
+      const maxWidth = 1000;
+      const maxHeight = 1000;
+      
+      // Display the message with file size and dimensions restrictions
+      alert(`Selected file: ${file.name}\nSize: ${fileSizeInMB.toFixed(2)} MB\nDimensions: ${maxWidth}x${maxHeight}`);
+    }
+  });
+</script>
+
+  <script>
+  // Get all job title elements
+  const jobTitles = document.querySelectorAll('.job-title');
+  
+  // Add event listener to each job title
+  jobTitles.forEach((title) => {
+    title.addEventListener('click', showSelectedJob);
+  });
+  
+  function showSelectedJob(event) {
+    // Hide all job content sections
+      const jobContents = document.querySelectorAll('.job-content');
+      jobContents.forEach((content) => {
+        content.style.display = 'none';
+      });
+      
+      // Show the selected job content
+      const selectedJobId = event.target.getAttribute('data-job-id');
+      const selectedJobContent = document.getElementById(selectedJobId);
+      selectedJobContent.style.display = 'block';
+    }
+    </script>
+
+
+
+<script>
+  // Get the job description element
+  var jobDescription = document.querySelector('.job-description .description-content');
+  
+  // Get the radio inputs for job tags
+  var jobTagInputs = document.querySelectorAll('.job-tag-toggle__input');
+  
+  // Add event listeners to the job tag inputs
+  jobTagInputs.forEach(function(input) {
+    input.addEventListener('click', function() {
+      var selectedValue = this.value;
+      
+      if (selectedValue === '[data-filter~=engineering]') {
+        jobDescription.textContent = 'Engineering job description goes here.5';
+      } else {
+        jobDescription.textContent = ''; // Clear the job description if a different job tag is selected
+      }
+    });
+  });
+  
+  // Get all job title elements
+  const jobTitles = document.querySelectorAll('.job-title');
+  
+  // Add event listener to each job title
+  jobTitles.forEach((title) => {
+    title.addEventListener('click', showSelectedJob);
+  });
+  
+  function showSelectedJob(event) {
+    // Hide all job content sections
+    const jobContents = document.querySelectorAll('.job-content');
+    jobContents.forEach((content) => {
+      content.style.display = 'none';
+    });
+    
+    // Show the selected job content
+    const selectedJobId = event.target.getAttribute('data-job-id');
+    const selectedJobContent = document.getElementById(selectedJobId);
+    selectedJobContent.style.display = 'block';
+  }
+  </script> 
+
+
+<script>
+    $(document).ready(function() {
+      $('.card').addClass('card-animation');
+    });
+    </script>
+  </script>
+
+
+  <script>
+  // JavaScript code for job filtering
+document.addEventListener("DOMContentLoaded", function () {
+  const filterRadioInputs = document.querySelectorAll(".job-tag-toggle__input");
+  const jobContentSections = document.querySelectorAll(".job-content");
+
+  function showAllJobDescriptions() {
+    jobContentSections.forEach((section) => {
+      section.style.display = "block";
+    });
+  }
+
+  function hideAllJobDescriptions() {
+    jobContentSections.forEach((section) => {
+      section.style.display = "none";
+    });
+  }
+
+  function showJobDescription(jobId) {
+    jobContentSections.forEach((section) => {
+      if (section.id === jobId) {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    });
+  }
+
+  // Handle filter radio button clicks
+  filterRadioInputs.forEach((input) => {
+    input.addEventListener("change", function () {
+      const value = this.value;
+
+      if (value === "[data-filter]") {
+        showAllJobDescriptions();
+      } else {
+        hideAllJobDescriptions();
+        showJobDescription(value);
+      }
+    });
+  });
+
+  // Show all job descriptions by default
+  showAllJobDescriptions();
+});
+
+</script>
+
